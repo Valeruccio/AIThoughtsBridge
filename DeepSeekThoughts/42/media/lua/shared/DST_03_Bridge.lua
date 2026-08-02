@@ -319,7 +319,13 @@ function B.pollResponseFull()
         end
         B._pending = false
         clearInbox()
-        return nil
+        -- Surface error to server so busy jobs / dialogue sessions unlock
+        return {
+            request_id = data.request_id,
+            thought = nil,
+            error = data.error and tostring(data.error) or "empty_response",
+            kind = data.kind,
+        }
     end
 
     clearInbox()

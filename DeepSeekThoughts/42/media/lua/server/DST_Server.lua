@@ -457,13 +457,30 @@ end
 local function endSession(sess, reason)
     if not sess then return end
     sess.phase = "cooloff"
+    reason = tostring(reason or "ended")
     local cool = C.DialogueCooloffSec or (D and D.COOLOFF_SEC) or 240
     if sess.quiet or (DSThoughts.Banter and DSThoughts.Banter.isSmallTalkTrigger and DSThoughts.Banter.isSmallTalkTrigger(sess.trigger)) then
         cool = (C.SmallTalkMinutes or 10) * 60
     end
+    -- Bridge/timeout failures: short cooloff so Home / next talk works again
+    if reason == "bridge_error" or reason == "timeout" or reason == "force_restart" then
+        cool = 3
+    end
     sess.cooloff_until = nowSec() + cool
     if sess.group_key and sess.group_key ~= "" then
         groupCooloff[sess.group_key] = sess.cooloff_until
+    end
+    -- Drop queued turns for this session (avoids zombie jobs after bridge_error)
+    local sid = sess.id
+    if sid and #dialogueQueue > 0 then
+        local kept = {}
+        for i = 1, #dialogueQueue do
+            local it = dialogueQueue[i]
+            if it and it.session_id ~= sid then
+                kept[#kept + 1] = it
+            end
+        end
+        dialogueQueue = kept
     end
     local keys = {}
     for i = 1, #(sess.participants or {}) do
@@ -471,11 +488,11 @@ local function endSession(sess, reason)
     end
     broadcastNear(sess.x, sess.y, sess.z, C.DialogueHearRadius or 12, N.CMD_DIALOGUE_ENDED, {
         session_id = sess.id,
-        reason = tostring(reason or "ended"),
+        reason = reason,
         trigger = sess.trigger,
     }, keys)
     sessions[sess.id] = nil
-    log("dialogue ended id=" .. tostring(sess.id) .. " reason=" .. tostring(reason))
+    log("dialogue ended id=" .. tostring(sess.id) .. " reason=" .. reason)
 end
 
 local function queueDialogueTurn(sess, speakerPart, character, affect, language, swear)
@@ -654,30 +671,34 @@ local function onDialogueEvent(player, args)
 
     local existing = findActiveSessionNear(x, y, parts)
     if existing then
-        -- Do not inject quiet smalltalk into a serious beat; drop it
-        if isSmall then
+        if force then
+            endSession(existing, "force_restart")
+            -- fall through and open a fresh session
+        elseif isSmall then
+            -- Do not inject quiet smalltalk into a serious beat; drop it
+            return
+        else
+            -- Enqueue interrupt event for later turn; do not parallel LLM
+            existing.pending_events = existing.pending_events or {}
+            if #existing.pending_events < 4 then
+                existing.pending_events[#existing.pending_events + 1] = {
+                    trigger = trigger,
+                    focus_key = args.focus_key,
+                }
+            end
+            -- Merge new participants
+            local seen = {}
+            for i = 1, #existing.participants do
+                seen[existing.participants[i].key] = true
+            end
+            for i = 1, #parts do
+                if not seen[parts[i].key] then
+                    existing.participants[#existing.participants + 1] = parts[i]
+                end
+            end
+            log("dialogue event queued mid-session trigger=" .. trigger)
             return
         end
-        -- Enqueue interrupt event for later turn; do not parallel LLM
-        existing.pending_events = existing.pending_events or {}
-        if #existing.pending_events < 4 then
-            existing.pending_events[#existing.pending_events + 1] = {
-                trigger = trigger,
-                focus_key = args.focus_key,
-            }
-        end
-        -- Merge new participants
-        local seen = {}
-        for i = 1, #existing.participants do
-            seen[existing.participants[i].key] = true
-        end
-        for i = 1, #parts do
-            if not seen[parts[i].key] then
-                existing.participants[#existing.participants + 1] = parts[i]
-            end
-        end
-        log("dialogue event queued mid-session trigger=" .. trigger)
-        return
     end
 
     -- Soft reunion upgrade (never hijack small talk)
@@ -1128,7 +1149,31 @@ local function pollBridge()
     end
 
     local resp = DSThoughts.Bridge.pollResponseFull()
-    if not resp or not resp.thought or resp.thought == "" then
+    if not resp then
+        return
+    end
+
+    -- Bridge rejected / empty: unlock queue and kill stuck dialogue session
+    if resp.error or not resp.thought or resp.thought == "" then
+        log("bridge job failed kind=" .. tostring(busyKind)
+            .. " err=" .. tostring(resp.error or "empty"))
+        if busyKind == "thought" and busyPlayer then
+            sendTo(busyPlayer, N.CMD_ERROR, {
+                error = "bridge_error",
+                request_id = busyRequestId,
+                detail = tostring(resp.error or "empty"),
+            })
+        elseif busyKind == "dialogue" and busySessionId and sessions[busySessionId] then
+            endSession(sessions[busySessionId], "bridge_error")
+        end
+        busy = false
+        busyRequestId = nil
+        busySpeaker = ""
+        busyKind = "thought"
+        busyOnlineId = 0
+        busyPlayer = nil
+        busySessionId = nil
+        tryStartNext()
         return
     end
 

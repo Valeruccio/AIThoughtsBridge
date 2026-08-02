@@ -1748,8 +1748,9 @@ def call_llm_result(data: dict) -> dict:
                 arc_phase=arc_phase,
                 digest=digest_list,
             )
-            # Dialogue: only hard meta/cliche gates (keep speech freer)
-            last_reasons = [r for r in last_reasons if r in ("meta", "cliche", "empty")]
+            # Dialogue: block only meta/empty. Cliche list is for inner thoughts
+            # ("как будто" etc. are normal in spoken Russian).
+            last_reasons = [r for r in last_reasons if r in ("meta", "empty")]
             if not last_reasons:
                 accepted = True
                 break
@@ -1787,10 +1788,18 @@ def call_llm_result(data: dict) -> dict:
 
     if not accepted or not text:
         why = ",".join(last_reasons) if last_reasons else "empty"
-        raise RuntimeError(
-            f"thought_rejected:{why} — fail-closed after retries "
-            "(no publish of bad draft)"
-        )
+        # Dialogue: if we have spoken text, publish last draft instead of killing the turn
+        if kind == "dialogue" and text and "meta" not in (last_reasons or []):
+            print(
+                f"[bridge] dialogue soft-accept after retries "
+                f"(was rejected={why}): {text}"
+            )
+            accepted = True
+        else:
+            raise RuntimeError(
+                f"thought_rejected:{why} — fail-closed after retries "
+                "(no publish of bad draft)"
+            )
 
     save_recent_thought(text)
     out = {"thought": text, "kind": kind}

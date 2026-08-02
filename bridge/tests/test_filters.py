@@ -37,6 +37,13 @@ def test_machine_phrases():
     assert thought_has_banned("Reality set in hard")
 
 
+def test_natural_kak_budto_allowed():
+    # Common spoken Russian — must not trip cliche ban (broke MP dialogues)
+    assert not thought_has_banned(
+        "Ноги гудят, как будто весь день по крышам лазил. Мелани, ты как?"
+    )
+
+
 def test_meta_reject():
     assert looks_like_meta_thought("Plan for inner voice: draft candidates")
     assert looks_like_meta_thought("OUTPUT LANGUAGE: Russian")

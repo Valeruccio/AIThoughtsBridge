@@ -492,6 +492,9 @@ function DC.forceDialogue()
         return false
     end
 
+    -- Unstick local UI flag if a prior session died without DialogueEnded
+    DC._inDialogue = false
+
     local nearby = DC.collectNearby(player, C.DialogueStartRadius or 8)
     if #nearby < 1 then
         C.log("Force dialogue: nobody nearby")
