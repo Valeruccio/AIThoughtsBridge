@@ -1,0 +1,676 @@
+{
+  "version": 1,
+  "monologues": [
+    {
+      "id": "come_on_girl",
+      "tiers": [
+        "uneasy",
+        "scared",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Да ну же… ну заведись."
+    },
+    {
+      "id": "key_rattle",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ключ дребезжит. Мотор молчит. Классика."
+    },
+    {
+      "id": "battery_joke",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Аккумулятор умер раньше меня. Нечестно."
+    },
+    {
+      "id": "hotwire_prayer",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "vehicle",
+        "hotwire"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Провода как молитва. Только без бога."
+    },
+    {
+      "id": "click_click",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Щёлк. Щёлк. Тишина. Сука."
+    },
+    {
+      "id": "sunday_soft",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тихонько… не орём на холостых.",
+      "trait_bias": [
+        "SundayDriver"
+      ]
+    },
+    {
+      "id": "demon_impatient",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ну же, железяка. Я не для стоянок.",
+      "trait_bias": [
+        "SpeedDemon"
+      ]
+    },
+    {
+      "id": "caught_smug",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Завелась. Хоть кто-то сегодня слушается."
+    },
+    {
+      "id": "roar_flinch",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Рёв — и внутри ёкнуло. Тише можно было?",
+      "trait_bias": [
+        "SundayDriver"
+      ]
+    },
+    {
+      "id": "roar_yes",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "start"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Рёв! Вот это разговор.",
+      "trait_bias": [
+        "SpeedDemon"
+      ]
+    },
+    {
+      "id": "road_empty",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пустая дорога. Почти как раньше — почти."
+    },
+    {
+      "id": "wheel_hum",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Гул под колёсами. Можно дышать."
+    },
+    {
+      "id": "mirror_check",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Зеркало. Опять. Привычка сильнее страха."
+    },
+    {
+      "id": "gas_soft",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Газ — чуть-чуть. Не геройствуем.",
+      "trait_bias": [
+        "SundayDriver"
+      ]
+    },
+    {
+      "id": "gas_more",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ещё газку. Мир и так тормозит.",
+      "trait_bias": [
+        "SpeedDemon"
+      ]
+    },
+    {
+      "id": "brake_hate",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тормоза в голове громче педали.",
+      "trait_bias": [
+        "SpeedDemon"
+      ]
+    },
+    {
+      "id": "slowpoke_curse",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кто тут ползёт? А, это я. Сознательно.",
+      "trait_bias": [
+        "SundayDriver"
+      ]
+    },
+    {
+      "id": "speed_fix",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Скорость — единственный кайф, который ещё легален.",
+      "trait_bias": [
+        "SpeedDemon"
+      ]
+    },
+    {
+      "id": "cabin_smell",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "entered"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Запах салона — пыль, бензин, чужая жизнь."
+    },
+    {
+      "id": "seat_sink",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "entered"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сел. Сиденье помнит кого-то другого."
+    },
+    {
+      "id": "keys_pocket",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "entered"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ключ в кармане греет сильнее надежды."
+    },
+    {
+      "id": "radio_dead_car",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Радио молчит. Хорошо — меньше сирен в голове."
+    },
+    {
+      "id": "wipers_ghost",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дворники без дождя. Руки сами."
+    },
+    {
+      "id": "lane_keep",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Держи полосу. Хотя полос уже нет."
+    },
+    {
+      "id": "zombie_roadkill_no",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не дави их специально. Шум — налог."
+    },
+    {
+      "id": "bumper_kiss",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бампер целует куст. Живы. Пока."
+    },
+    {
+      "id": "stalled_mid",
+      "tiers": [
+        "scared",
+        "panic",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "stall"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Заглохла. Посреди всего. Нет-нет-нет."
+    },
+    {
+      "id": "stall_curse",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "stall"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Мотор сдох на ходу. Руки на ключ — молись."
+    },
+    {
+      "id": "stall_demon",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "stall"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Только разогнался — и тишина. Предательство.",
+      "trait_bias": [
+        "SpeedDemon"
+      ]
+    },
+    {
+      "id": "crash_metal",
+      "tiers": [
+        "panic",
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "vehicle",
+        "crash"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Металл орёт. Тело тоже."
+    },
+    {
+      "id": "crash_jolt",
+      "tiers": [
+        "panic",
+        "scared"
+      ],
+      "tags": [
+        "vehicle",
+        "crash"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Удар. Зубы клац. Мир качнулся."
+    },
+    {
+      "id": "crash_sunday",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "vehicle",
+        "crash"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Я же тихонько… а оно всё равно.",
+      "trait_bias": [
+        "SundayDriver"
+      ]
+    },
+    {
+      "id": "hood_open_pray",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "repair"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Капот открыт. Молитва гаечным ключом."
+    },
+    {
+      "id": "grease_mood",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "repair"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Смазь на пальцах. Хоть чем-то занят."
+    },
+    {
+      "id": "battery_swap_hope",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "repair"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Батарея… ну давай, оживи эту консерву."
+    },
+    {
+      "id": "engine_guts",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "repair"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кишки мотора. Знакомо и противно."
+    },
+    {
+      "id": "tire_hiss",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "vehicle",
+        "repair"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Шина шипит. Как змея под днищем."
+    },
+    {
+      "id": "alarm_head",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "alarm"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сигналка орёт. Я её ненавижу сильнее упырей."
+    },
+    {
+      "id": "park_quiet",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Заглушить? Или пусть урчит — как кот."
+    },
+    {
+      "id": "fuel_worry",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бензин в уме. Цифра меньше покоя."
+    },
+    {
+      "id": "window_crack",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Форточка на щелку. Воздух и риск."
+    },
+    {
+      "id": "backseat_ghost",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "entered"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "На заднем кто-то «есть». Пусто. Но есть."
+    },
+    {
+      "id": "gear_grind",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Передача хрустнула. Прости, железяка."
+    },
+    {
+      "id": "night_beams",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Фары режут тьму. Слишком заметно. Нужно."
+    },
+    {
+      "id": "exit_fast",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "vehicle",
+        "exit"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Выскочить. Дверь. Ноги. Не думай."
+    },
+    {
+      "id": "engine_tick",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "vehicle",
+        "drive"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тикает остывая. Как часы после смены."
+    }
+  ]
+}

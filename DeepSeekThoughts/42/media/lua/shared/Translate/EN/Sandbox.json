@@ -1,0 +1,11 @@
+{
+  "Sandbox_DeepSeekThoughts": "AI Thoughts",
+  "DeepSeekThoughts_Enabled": "Enable thoughts",
+  "DeepSeekThoughts_DialogueEnabled": "Dialogues between players",
+  "DeepSeekThoughts_DialogueAttractsZombies": "Dialogues attract zombies",
+  "DeepSeekThoughts_SmallTalkEnabled": "Small talk when calm",
+  "DeepSeekThoughts_BanterHeat": "Banter intensity",
+  "DeepSeekThoughts_BanterHeat_value_option1": "Soft",
+  "DeepSeekThoughts_BanterHeat_value_option2": "Normal",
+  "DeepSeekThoughts_BanterHeat_value_option3": "Spicy"
+}

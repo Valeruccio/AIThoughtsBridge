@@ -1,0 +1,8 @@
+name=AI Thoughts
+id=DeepSeekThoughts
+author=Valera
+description=Build 42: private AI thoughts, spoken dialogues, quiet small talk. Host runs the Python bridge (Mode B).
+poster=poster.png
+url=
+version=2.0.0
+versionMin=42.13.0

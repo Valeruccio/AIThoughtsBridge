@@ -1,0 +1,1469 @@
+{
+  "version": 1,
+  "monologues": [
+    {
+      "id": "rot_breath",
+      "tiers": [
+        "scared",
+        "combat",
+        "uneasy"
+      ],
+      "tags": [
+        "smell",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Вонь гнилого рта уже в ноздрях. Мелькни ещё, падла."
+    },
+    {
+      "id": "wet_jaw",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "smell",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Челюсть хлюпает. Хоть бы зубы себе выбил об асфальт."
+    },
+    {
+      "id": "looks_boss",
+      "tiers": [
+        "uneasy",
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Этот упырь похож на начальника. Даже улучшение."
+    },
+    {
+      "id": "looks_neighbor",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сосед в халате. Узнал. Привет… нет."
+    },
+    {
+      "id": "looks_ex",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бывшая? Серьёзно? Вселенная троллит."
+    },
+    {
+      "id": "stumble_please",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "hate",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Споткнись уже, падаль. Хоть раз."
+    },
+    {
+      "id": "pack_shadow",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тени слишком близко. Считай шаги — свои, не их."
+    },
+    {
+      "id": "ammo_count",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Патроны в уме. Цифры утешают хуже молитвы.",
+      "prof_bias": [
+        "policeofficer",
+        "veteran"
+      ]
+    },
+    {
+      "id": "finger_straight",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "guns",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Палец прямее совести. Старая привычка.",
+      "prof_bias": [
+        "veteran",
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "hate_them",
+      "tiers": [
+        "scared",
+        "combat",
+        "panic"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ненавижу. Каждого. Особенно этого."
+    },
+    {
+      "id": "teeth_close",
+      "tiers": [
+        "scared",
+        "panic",
+        "death"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Зубы слишком близко. Нет-нет-нет."
+    },
+    {
+      "id": "dont_breathe",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не дыши. Не сейчас. Потом."
+    },
+    {
+      "id": "legs_work",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ноги, работайте. Просто работайте."
+    },
+    {
+      "id": "vision_tunnel",
+      "tiers": [
+        "panic",
+        "death"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Туннель вместо мира. Держись."
+    },
+    {
+      "id": "crowd_math",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Их слишком много. Математика против меня."
+    },
+    {
+      "id": "gun_jam",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "guns",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Только не клин. Только не сейчас."
+    },
+    {
+      "id": "one_more_head",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "guns",
+        "swagger"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ещё один. В голову.",
+      "prof_bias": [
+        "veteran",
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "reload_prayer",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Перезарядка как молитва. Короткая. Громкая."
+    },
+    {
+      "id": "axe_rhythm",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ритм удара. Раз. Два. Как дрова — только злее.",
+      "prof_bias": [
+        "lumberjack"
+      ]
+    },
+    {
+      "id": "knife_romance",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кухонный нож — мой новый роман. Токсичный."
+    },
+    {
+      "id": "smell_stairwell",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "smell"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Воняет как после драки в подъезде. Только эти прут толпой."
+    },
+    {
+      "id": "sarge_face",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "zombie",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тупой взгляд — как у старшины. Тот же ноль в глазах.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "fallujah_dogs",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "memory",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как те псы — только гнилые.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "baghdad_slow",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как там — только медленнее.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "empty_hands",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пустые руки рядом с мертвецами — голый неправильный холод."
+    },
+    {
+      "id": "stone_please",
+      "tiers": [
+        "scared"
+      ],
+      "tags": [
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Хоть бы камень под ногами. Что угодно твёрдое."
+    },
+    {
+      "id": "heart_drum",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сердце отбивает марш. Заткнись, я считаю."
+    },
+    {
+      "id": "spit_hate",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Плевать. Сдохни уже."
+    },
+    {
+      "id": "pack_press",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Давят числом. Как очередь в ад."
+    },
+    {
+      "id": "whisper_budget",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бюджет шума на сегодня исчерпан."
+    },
+    {
+      "id": "window_wrong",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Окно слишком тихое. Так не бывает."
+    },
+    {
+      "id": "blood_trail_not_mine",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кровавый след. Свежий. Не мой. Пока."
+    },
+    {
+      "id": "door_half",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дверь приоткрыта. Кто-то вышел… или ждёт."
+    },
+    {
+      "id": "infected_yet",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Уже заражён… или ещё нет?"
+    },
+    {
+      "id": "better_not",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лучше не знать, кто ещё жив."
+    },
+    {
+      "id": "nightmare_short",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ну и кошмар!"
+    },
+    {
+      "id": "please_not_today",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Только не сегодня. Ну же."
+    },
+    {
+      "id": "name_out_loud",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Имя. Скажи своё имя. Ты ещё ты."
+    },
+    {
+      "id": "soft_dark_enough",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "soft_dark"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Может, хватит… просто хватит."
+    },
+    {
+      "id": "soft_dark_empty",
+      "tiers": [
+        "death"
+      ],
+      "tags": [
+        "soft_dark"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Пусто. Как будто выключили свет внутри."
+    },
+    {
+      "id": "bleed_warm",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тепло и мокро. Это плохо."
+    },
+    {
+      "id": "cop_habit",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Хочется крикнуть «полиция». Смешно.",
+      "prof_bias": [
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "badge_ghost",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Жетон в кармане. Власть кончилась раньше патронов.",
+      "prof_bias": [
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "veteran_breath",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дыши как учили. Старый рефлекс лучше нового страха.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "swing_count",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Раз. Два. Три. Как в зале, только ставки выше."
+    },
+    {
+      "id": "ugly_pretty",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Без одежды… мозг, серьёзно?"
+    },
+    {
+      "id": "she_pretty",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Красивая была. До."
+    },
+    {
+      "id": "he_handsome",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Красавчик. Жаль, зубы не для улыбок."
+    },
+    {
+      "id": "tar_shadow",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тень в шляпе. Человек? Или уже нет."
+    },
+    {
+      "id": "map_lies",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Карта врёт. Или город съехал с катушек."
+    },
+    {
+      "id": "radio_static",
+      "tiers": [
+        "uneasy",
+        "media"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Шум между станциями. Как чужое дыхание."
+    },
+    {
+      "id": "car_alarm_head",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сигнализация в голове сама. Спасибо, нервы."
+    },
+    {
+      "id": "fever_check",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лоб горячий или кажется? Кажется. Наверное."
+    },
+    {
+      "id": "mirror_avoid",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В зеркало лучше не смотреть."
+    },
+    {
+      "id": "footsteps_mine",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Шаги. Мои? Чужие?"
+    },
+    {
+      "id": "quiet_jump",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Слишком тихо. В кино так перед прыжком."
+    },
+    {
+      "id": "pack_rats",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как тараканы из-под плинтуса — только зубастые."
+    },
+    {
+      "id": "drill_targets",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "memory",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как на учениях — только мишени в штатском.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "hound_tail",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Гончие на хвосте. Сука."
+    },
+    {
+      "id": "two_wont_quit",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Эти двое не отстанут. Сердце как отбой."
+    },
+    {
+      "id": "spit_world",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Гори оно всё."
+    },
+    {
+      "id": "ex_in_horde",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бывшая в этой орде? Чёрт, даже мёртвые достают."
+    },
+    {
+      "id": "no_smell_pack",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "fear",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Стая без запаха. Хуже."
+    },
+    {
+      "id": "faster_damn",
+      "tiers": [
+        "death",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Чёрт, быстрее!"
+    },
+    {
+      "id": "cold_on_heart",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "На сердце — холод."
+    },
+    {
+      "id": "no_command",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Стая без команды. Терпеть не могу."
+    },
+    {
+      "id": "burn_it",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сдохните уже."
+    },
+    {
+      "id": "jaw_double",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В глазах двоится. Держись."
+    },
+    {
+      "id": "vomit_threat",
+      "tiers": [
+        "scared"
+      ],
+      "tags": [
+        "body",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сейчас рвота — только этого не хватало."
+    },
+    {
+      "id": "scope_show",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "guns",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Покажу, что значит попасть под прицел.",
+      "prof_bias": [
+        "veteran",
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "breakfast_late",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "joke",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как будто я им завтрак проспал."
+    },
+    {
+      "id": "earth_shake",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Земля будто дрожит от их торопливости."
+    },
+    {
+      "id": "waterhole",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как стадо к водопою. Только я — вода."
+    },
+    {
+      "id": "formation",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как рота на построение. Без командира.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "three_left",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Три твари. Всё, хана?"
+    },
+    {
+      "id": "blood_drums",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кровь стучит. Громче мыслей."
+    },
+    {
+      "id": "shoot_or_bolt",
+      "tiers": [
+        "death",
+        "combat"
+      ],
+      "tags": [
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Стрелять или рвать когти?"
+    },
+    {
+      "id": "wont_quit",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не отстанут. Сука."
+    },
+    {
+      "id": "first_shot_lie",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "После первого выстрела не сдохнут. Знаю."
+    },
+    {
+      "id": "minefield_naked",
+      "tiers": [
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Безоружный — как голый на минном поле."
+    },
+    {
+      "id": "hate_running_me",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "hate",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ненавижу, когда ноги решают за меня."
+    },
+    {
+      "id": "iraq_echo",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Будто снова там. Только другие монстры.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "afghan_bite",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Там стреляли. Тут кусают. Обмен хуже.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "patrol_worse",
+      "tiers": [
+        "scared"
+      ],
+      "tags": [
+        "memory",
+        "smell"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Гнилое дыхание. Хуже любого патруля.",
+      "prof_bias": [
+        "veteran",
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "plinth_rats",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Зубастые из щелей. Давите их."
+    },
+    {
+      "id": "no_trip",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Даже не спотыкаются, твари."
+    },
+    {
+      "id": "show_me",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "hate",
+        "swagger"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ну давай. Покажи зубы."
+    },
+    {
+      "id": "keep_count",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Считай их. Потом себя."
+    },
+    {
+      "id": "door_slam_wish",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Хоть бы дверь. Любая дверь."
+    },
+    {
+      "id": "glass_edge",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Стекло под ногами. Шум — смертный грех."
+    },
+    {
+      "id": "alley_trap",
+      "tiers": [
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Переулок жмёт. Выход один — сквозь них."
+    },
+    {
+      "id": "roof_wish",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Крыша. Лестница. Что угодно выше зубов."
+    },
+    {
+      "id": "siren_head",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В ушах сирена, которой нет."
+    },
+    {
+      "id": "grip_slip",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Руки потные. Хват врёт."
+    },
+    {
+      "id": "last_clip",
+      "tiers": [
+        "combat",
+        "death"
+      ],
+      "tags": [
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Последний магазин. Не думай."
+    },
+    {
+      "id": "bayonet_mind",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Штык в голове — привычка сильнее страха.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "civvies_wrong",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Одежда гражданская. Глаза — нет."
+    },
+    {
+      "id": "wedding_ring_zed",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кольцо на гнилом пальце. Не смотри."
+    },
+    {
+      "id": "kid_shoe",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Детский кед. Мозг, заткнись."
+    },
+    {
+      "id": "laugh_wrong",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Хочется ржать. Плохой момент."
+    },
+    {
+      "id": "prayer_half",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Молитва на половине слова. Хватит."
+    },
+    {
+      "id": "spit_copper",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Медь во рту. Знакомо."
+    },
+    {
+      "id": "shoulder_check",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Плечо ноет. Потом разберёмся."
+    },
+    {
+      "id": "crowd_push",
+      "tiers": [
+        "panic",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Давят. Воздуха нет."
+    },
+    {
+      "id": "exit_left",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Выход слева. Наверное. Наверное."
+    },
+    {
+      "id": "bite_lottery",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Укус — лотерея. Не хочу билет."
+    },
+    {
+      "id": "desensitized_note",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Должен бы орать. Внутри — тишина.",
+      "prof_bias": [
+        "veteran"
+      ]
+    }
+  ]
+}

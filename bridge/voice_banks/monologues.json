@@ -1,0 +1,2647 @@
+{
+  "version": 1,
+  "monologues": [
+    {
+      "id": "beach_jenny_m",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret",
+        "romance"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Вот бы снова с Дженни на том пляже… эээх.",
+      "en": "Back on that beach with Jenny… damn."
+    },
+    {
+      "id": "johnny_car_f",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret",
+        "romance"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Было классно там с Джонни в его тачке… дорога, скорость, секс, дайнеры… эээх.",
+      "en": "Johnny and that car… road, speed, sex, diners… damn."
+    },
+    {
+      "id": "wife_miss_m",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret",
+        "romance"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Жена моя… как же тебя не хватает.",
+      "en": "God, I miss my wife."
+    },
+    {
+      "id": "husband_miss_f",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret",
+        "romance"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Муж мой… где ты сейчас, а?",
+      "en": "Where are you now, love?"
+    },
+    {
+      "id": "dad_food",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Как говорил отец — держись поближе к еде.",
+      "en": "Dad said: stay close to the food."
+    },
+    {
+      "id": "mom_keys",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Мама всегда кричала: ключи на крючок! А я… ну да."
+    },
+    {
+      "id": "first_paycheck",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Первая зарплата. Пиво. Глупый и счастливый. Кажется, это был другой человек."
+    },
+    {
+      "id": "highschool_dance",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Выпускной. Ужасный костюм. И всё равно улыбался как дурак."
+    },
+    {
+      "id": "ex_voicemail",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "До сих пор помню её голос на автоответчике. Смешно, да?"
+    },
+    {
+      "id": "camping_trip",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тот кемпинг без зомби. Комары были главным врагом. Золотые времена."
+    },
+    {
+      "id": "church_coffee",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Церковный кофе был дрянь. А я бы сейчас выпил ведро."
+    },
+    {
+      "id": "brother_bet",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Брат спорил, что я не доживу до тридцати. Очко ему… почти."
+    },
+    {
+      "id": "sister_ok",
+      "tiers": [
+        "calm",
+        "media"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сестра… лишь бы она жива. Остальное мелочи."
+    },
+    {
+      "id": "dog_name",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Барни. Ты бы облаял всю эту орду. Не хватает тебя, псина."
+    },
+    {
+      "id": "wedding_song",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Та песня на свадьбе… почему она сейчас в голове?"
+    },
+    {
+      "id": "almost_quit_job",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Чуть не уволился за неделю до всего. Ха. Планы."
+    },
+    {
+      "id": "last_normal_friday",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Последняя нормальная пятница. Бары. Сплетни. Никто не знал."
+    },
+    {
+      "id": "teacher_crush",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В школе влюблялся в учительницу. Сейчас бы она меня укусила. Ирония."
+    },
+    {
+      "id": "grandma_soup",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бабушкин борщ. Не выживание — религия."
+    },
+    {
+      "id": "old_apartment",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Старая квартира. Соседи сверху. Теперь бы обнял даже их."
+    },
+    {
+      "id": "rob_supermarket",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Всегда хотел ограбить супермаркет. Ну… технически сейчас можно."
+    },
+    {
+      "id": "guns_love",
+      "tiers": [
+        "calm",
+        "combat"
+      ],
+      "tags": [
+        "joke",
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пушки, пушки… как же я люблю пушки.",
+      "prof_bias": [
+        "policeofficer",
+        "veteran",
+        "securityguard"
+      ]
+    },
+    {
+      "id": "dress_look",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "outfit"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Ого, женское платье. Как я в нём буду выглядеть?"
+    },
+    {
+      "id": "car_start",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wish",
+        "car"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Интересно, та тачка заведётся?"
+    },
+    {
+      "id": "anyone_alive",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Интересно, есть кто живой в этом городе… или лучше не надо."
+    },
+    {
+      "id": "walk_or_die",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Прогулка или смерть? Подбрасываю монетку в голове."
+    },
+    {
+      "id": "zombie_movie_wrong",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "zombie_media"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В кино бегали быстрее. Обман рекламы."
+    },
+    {
+      "id": "headshot_rules",
+      "tiers": [
+        "calm",
+        "combat"
+      ],
+      "tags": [
+        "joke",
+        "zombie_media"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Правило номер один: в голову. Спасибо, Голливуд… иногда."
+    },
+    {
+      "id": "dawn_of",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "zombie_media"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "«Рассвет мертвецов». Не думал, что буду жить в сиквеле."
+    },
+    {
+      "id": "shopping_cart_armor",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тележка из магазина — броня бедняка. Модно."
+    },
+    {
+      "id": "canned_beans_poem",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ода банке фасоли. Сонеты позже."
+    },
+    {
+      "id": "toilet_paper_war",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Люди дрались за туалетную бумагу. Теперь за патроны. Прогресс."
+    },
+    {
+      "id": "gps_useless",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "GPS говорит: сверните… в ад. Понял, спасибо."
+    },
+    {
+      "id": "influencer_dead",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Интересно, блогеры тоже стали… контентом."
+    },
+    {
+      "id": "netflix_and",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Netflix and chill. Теперь просто chill и не умереть."
+    },
+    {
+      "id": "diet_starts",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Диета «конец света» работает. Талия рада, душа нет."
+    },
+    {
+      "id": "monday_forever",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Вечный понедельник. Даже апокалипсис не отменил."
+    },
+    {
+      "id": "horoscope",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Гороскоп: сегодня вас могут съесть. Вау, точность."
+    },
+    {
+      "id": "lottery_ticket",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лотерейный билет в кармане. Джекпот уже не тот."
+    },
+    {
+      "id": "selfie_stick",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Селфи-палка. Идеальное оружие… для стыда."
+    },
+    {
+      "id": "shave_itch_m",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "body",
+        "joke"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Как бы лобок побрить — чешется ужасно."
+    },
+    {
+      "id": "legs_shave_f",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "body",
+        "joke"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Ноги бы побрить. Апокалипсис — не оправдание чесаться."
+    },
+    {
+      "id": "cold_shower_miss",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Холодный душ. Просто душ. Я не прошу пятизвёздочный спа."
+    },
+    {
+      "id": "deodorant_fantasy",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дезодорант. Один пшик — и я снова человек."
+    },
+    {
+      "id": "pizza_dream",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пицца. Горячая. Сыр тянется. Мозг, хватит пытать."
+    },
+    {
+      "id": "cigarette_break",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Перекур без сирены. Роскошь королей."
+    },
+    {
+      "id": "coffee_real",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Настоящий кофе, не этот… бурп из банки."
+    },
+    {
+      "id": "clean_sheets",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Чистые простыни. Я готов убить за это. Почти."
+    },
+    {
+      "id": "toothpaste",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Зубная паста со вкусом мяты, а не отчаяния."
+    },
+    {
+      "id": "haircut",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "body",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Стрижка. Выгляжу как куст, переживший ураган."
+    },
+    {
+      "id": "zombie_looks_boss",
+      "tiers": [
+        "uneasy",
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Этот упырь похож на моего начальника. Даже улучшение."
+    },
+    {
+      "id": "zombie_looks_neighbor",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сосед с третьего. Узнал по халату. Привет… нет."
+    },
+    {
+      "id": "zombie_looks_ex",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бывшая? Серьёзно? Вселенная троллит."
+    },
+    {
+      "id": "better_not_know",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лучше не знать, кто ещё жив. Надежда кусается."
+    },
+    {
+      "id": "infected_yet",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Интересно, я уже заражён… или ещё нет?"
+    },
+    {
+      "id": "branch_snap",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ветка хрустнула — и я замер. Даже не дыши."
+    },
+    {
+      "id": "wet_foreheads",
+      "tiers": [
+        "uneasy",
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "fear",
+        "zombie"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Слышу их — даже мокрые лбы хлюпают. Хоть бы один споткнулся."
+    },
+    {
+      "id": "smell_mold",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Вонь уже в горле, как плесень. Мелькни ещё, падла."
+    },
+    {
+      "id": "window_wrong",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Окно слишком тихое. Окна так не бывают."
+    },
+    {
+      "id": "footsteps_mine",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Шаги. Мои? Чужие? Сердце, заткнись, я считаю."
+    },
+    {
+      "id": "mirror_avoid",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В зеркало лучше не смотреть. Там кто-то уставший."
+    },
+    {
+      "id": "fever_check",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лоб горячий или мне кажется? Кажется. Наверное. Блин."
+    },
+    {
+      "id": "door_half",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дверь приоткрыта. Кто-то вышел… или ждёт."
+    },
+    {
+      "id": "quiet_too_quiet",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Слишком тихо. В кино так перед прыжком."
+    },
+    {
+      "id": "blood_trail",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кровавый след. Свежий. Не мой. Пока."
+    },
+    {
+      "id": "car_alarm_memory",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Автосигнализация в голове играет сама. Спасибо, нервы."
+    },
+    {
+      "id": "map_lies",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Карта врёт. Или город съехал с катушек."
+    },
+    {
+      "id": "radio_static_fear",
+      "tiers": [
+        "uneasy",
+        "media"
+      ],
+      "tags": [
+        "fear",
+        "media"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Шум в эфире. Как будто кто-то дышит между станциями."
+    },
+    {
+      "id": "shadow_hat",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тень в шляпе. Человек? Или уже нет."
+    },
+    {
+      "id": "count_ammo_mind",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Считаю патроны в уме. Цифры утешают хуже молитвы.",
+      "prof_bias": [
+        "policeofficer",
+        "veteran"
+      ]
+    },
+    {
+      "id": "nightmare_short",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ну и кошмар!"
+    },
+    {
+      "id": "dont_breathe",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не дыши. Не сейчас. Потом."
+    },
+    {
+      "id": "teeth_close",
+      "tiers": [
+        "scared",
+        "panic",
+        "death"
+      ],
+      "tags": [
+        "fear",
+        "zombie"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Зубы слишком близко. Нет-нет-нет."
+    },
+    {
+      "id": "run_legs",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ноги, работайте. Просто работайте."
+    },
+    {
+      "id": "hate_them",
+      "tiers": [
+        "scared",
+        "combat",
+        "panic"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ненавижу. Каждого. Особенно этого."
+    },
+    {
+      "id": "please_not_today",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Только не сегодня. Ну же."
+    },
+    {
+      "id": "soft_dark_enough",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "soft_dark",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Может, хватит… просто хватит."
+    },
+    {
+      "id": "soft_dark_empty",
+      "tiers": [
+        "death"
+      ],
+      "tags": [
+        "soft_dark"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Пусто. Как будто выключили свет внутри."
+    },
+    {
+      "id": "soft_dark_maybe",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "soft_dark"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Может, пора… закончить? Мимолётная дрянь мысли."
+    },
+    {
+      "id": "soft_dark_joke",
+      "tiers": [
+        "death",
+        "calm"
+      ],
+      "tags": [
+        "soft_dark",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Конец света, а я всё ещё прокрастинирую умирать."
+    },
+    {
+      "id": "bleed_warm",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тепло и мокро. Это плохо. Это очень плохо."
+    },
+    {
+      "id": "vision_tunnel",
+      "tiers": [
+        "panic",
+        "death"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Туннель вместо мира. Держись."
+    },
+    {
+      "id": "name_out_loud",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Имя. Скажи своё имя. Ты ещё ты."
+    },
+    {
+      "id": "gun_jam_fear",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "guns",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Только не клин. Только не сейчас."
+    },
+    {
+      "id": "crowd_numbers",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear",
+        "zombie"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Их слишком много. Математика против меня."
+    },
+    {
+      "id": "trip_please",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "hate",
+        "zombie"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Споткнись уже, падаль."
+    },
+    {
+      "id": "ugly_attractive",
+      "tiers": [
+        "combat",
+        "calm"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Этот зомби без одежды… выглядел вполне себе. Мозг, серьёзно?"
+    },
+    {
+      "id": "she_was_pretty",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Она выглядела привлекательно. До того как… ну."
+    },
+    {
+      "id": "he_was_handsome",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "zombie",
+        "joke"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Красавчик был. Жаль, зубы теперь не для улыбок."
+    },
+    {
+      "id": "swing_count",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Раз. Два. Три. Как в зале, только ставки выше."
+    },
+    {
+      "id": "cop_habit",
+      "tiers": [
+        "combat",
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Привычка кричать «полиция!» ещё жива. Смешно.",
+      "prof_bias": [
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "badge_ghost",
+      "tiers": [
+        "combat",
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Жетон в кармане. Власть закончилась раньше патронов.",
+      "prof_bias": [
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "veteran_breath",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дыши как учили. Старый рефлекс лучше нового страха.",
+      "prof_bias": [
+        "veteran"
+      ]
+    },
+    {
+      "id": "kitchen_knife_romance",
+      "tiers": [
+        "combat",
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кухонный нож — мой новый роман. Токсичный."
+    },
+    {
+      "id": "reload_prayer",
+      "tiers": [
+        "combat"
+      ],
+      "tags": [
+        "guns"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Перезарядка как молитва. Короткая. Громкая."
+    },
+    {
+      "id": "media_liar",
+      "tiers": [
+        "media",
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "media",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Эфир врёт красиво. Как всегда."
+    },
+    {
+      "id": "media_miss_hosts",
+      "tiers": [
+        "media",
+        "calm"
+      ],
+      "tags": [
+        "media",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ведущий ещё жив в моей голове. Глупо."
+    },
+    {
+      "id": "media_commercial",
+      "tiers": [
+        "media",
+        "calm"
+      ],
+      "tags": [
+        "media",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Реклама в апокалипсисе. Капитализм не сдаётся."
+    },
+    {
+      "id": "media_weather",
+      "tiers": [
+        "media",
+        "calm"
+      ],
+      "tags": [
+        "media"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Погода по ящику. Как будто это главное."
+    },
+    {
+      "id": "media_music",
+      "tiers": [
+        "media",
+        "calm"
+      ],
+      "tags": [
+        "media",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Музыка из динамика — и на секунду мир нормальный."
+    },
+    {
+      "id": "media_emergency",
+      "tiers": [
+        "media",
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "media",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Экстренный тон. Спасибо, я уже в курсе."
+    },
+    {
+      "id": "media_argue",
+      "tiers": [
+        "media",
+        "calm"
+      ],
+      "tags": [
+        "media"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Да ну вас. Вы там не видите того, что вижу я."
+    },
+    {
+      "id": "media_believe",
+      "tiers": [
+        "media",
+        "uneasy"
+      ],
+      "tags": [
+        "media"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "А вдруг они правы? А вдруг нет?"
+    },
+    {
+      "id": "media_volume",
+      "tiers": [
+        "media",
+        "uneasy"
+      ],
+      "tags": [
+        "media",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Громко. Слишком громко для мёртвых ушей снаружи."
+    },
+    {
+      "id": "media_static_joke",
+      "tiers": [
+        "media",
+        "calm"
+      ],
+      "tags": [
+        "media",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Шумы эфира — лучший стендап сезона."
+    },
+    {
+      "id": "ice_cream_truck",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Машина с мороженым. Мелодия до сих пор в кости."
+    },
+    {
+      "id": "library_fine",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Просроченные книги в библиотеке. Штраф уже не взыщут."
+    },
+    {
+      "id": "gym_membership",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Абонемент в зал. Самый дорогой бумажный труп."
+    },
+    {
+      "id": "plant_died",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Комнатный цветок я убил ещё до орды. Тренировка."
+    },
+    {
+      "id": "neighbor_bbq",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Запах чужого барбекю по воскресеньям. Жестоко вспоминать."
+    },
+    {
+      "id": "train_delay",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Поезд опаздывал на двадцать минут. Какой милый кризис."
+    },
+    {
+      "id": "password_123",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пароль был 123456. Цифровая цивилизация заслужила конец."
+    },
+    {
+      "id": "spam_email",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Спам обещал увеличить… всё. Теперь спам молчит. Победа."
+    },
+    {
+      "id": "office_cake",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Офисный торт «с днём рождения». Картон и радость."
+    },
+    {
+      "id": "traffic_jam_miss",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пробка. Я скучаю по злости на светофор."
+    },
+    {
+      "id": "beach_jenny_alt",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Дженни смеялась громче волн. Глупо. Красиво."
+    },
+    {
+      "id": "johnny_diner_f",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Джонни заказывал мне панкейки в три ночи. Святой грешник."
+    },
+    {
+      "id": "ring_finger",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "regret",
+        "romance"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кольцо жмёт. Или это совесть."
+    },
+    {
+      "id": "kid_laugh",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Детский смех во дворе. Редко вспоминаю — больно."
+    },
+    {
+      "id": "fishing_lie",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Рыба была вот такая. Ложь выживает дольше рыбы."
+    },
+    {
+      "id": "concert_ticket",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Билет на концерт. Дата прошла. Группа… кто знает."
+    },
+    {
+      "id": "soda_can_cold",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Холодная кола. Банка потеет. Я тоже, но от другого."
+    },
+    {
+      "id": "board_game_night",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Вечер настолок. Кто-то читерил. Мир был справедлив иначе."
+    },
+    {
+      "id": "umbrella_left",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Зонт дома. Классика. Дождь и характер не меняются."
+    },
+    {
+      "id": "socks_pair",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Парные носки — редкий лут эндгейма."
+    },
+    {
+      "id": "church_bell",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Колокол. Раньше звал. Теперь просто звук."
+    },
+    {
+      "id": "taxi_smell",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Запах такси: ёлка и чужие тайны."
+    },
+    {
+      "id": "midnight_fries",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Картошка фри в полночь. Цивилизация в бумажном кульке."
+    },
+    {
+      "id": "photo_wallet",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Фото в кошельке. Улыбки как из другого вида."
+    },
+    {
+      "id": "new_years_kiss",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Поцелуй в Новый год. Хлопушки. Обещания. Ложь приятная."
+    },
+    {
+      "id": "rain_on_tin",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дождь по жести. Усыпляло лучше таблеток."
+    },
+    {
+      "id": "cat_judge",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кот смотрел с осуждением. Был прав."
+    },
+    {
+      "id": "subway_busker",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Музыкант в метро. Шляпа с мелочью. Искусство без Wi‑Fi."
+    },
+    {
+      "id": "cheap_wine",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дешёвое вино казалось хорошим. Оптимизм алкоголя."
+    },
+    {
+      "id": "park_bench",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Скамейка в парке. Кормить голубей. Глупая роскошь."
+    },
+    {
+      "id": "vending_jam",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Автомат заело чипсы. Тогда это было трагедией."
+    },
+    {
+      "id": "escalator_fear",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Эскалатор ломался — и мир казался хрупким. Ха."
+    },
+    {
+      "id": "airport_goodbye",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Прощание в аэропорту. Чемоданы. «Увидимся»."
+    },
+    {
+      "id": "text_unsent",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Неотправленное сообщение. Курсор мигал. Я струсил."
+    },
+    {
+      "id": "laundry_quarter",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Четвертак для стиралки. Экономика простого счастья."
+    },
+    {
+      "id": "comic_issue",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Недочитанный комикс. Клиффхэнгер навсегда."
+    },
+    {
+      "id": "bike_chain",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Цепь велосипеда. Смазка. Свобода на двух колёсах."
+    },
+    {
+      "id": "skate_scar",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Шрам от скейта. Доказательство, что я был глупым и живым."
+    },
+    {
+      "id": "mall_fountain",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Фонтан в молле. Желания за монетки. Инфляция мечты."
+    },
+    {
+      "id": "food_court",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Фуд-корт. Выбор из десяти зол. Рай."
+    },
+    {
+      "id": "storm_power",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Гроза вырубила свет — и все стали добрее на час."
+    },
+    {
+      "id": "flashlight_batteries",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Батарейки. Всегда заканчиваются в худший момент. Закон."
+    },
+    {
+      "id": "whistle_tune",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Свистнуть бы мотив… и не привлечь орду. Компромисс."
+    },
+    {
+      "id": "card_deck",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Колода карт. Пасьянс против безумия. Счёт 0:1."
+    },
+    {
+      "id": "dice_luck",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кубик в кармане. Удача — хобби для оптимистов."
+    },
+    {
+      "id": "crosswalk_button",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кнопка перехода. Ждал зелёный. Милый ритуал."
+    },
+    {
+      "id": "elevator_music",
+      "tiers": [
+        "calm",
+        "media"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Музыка в лифте. Пытка вежливостью."
+    },
+    {
+      "id": "hold_music",
+      "tiers": [
+        "media",
+        "calm"
+      ],
+      "tags": [
+        "media",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Музыка ожидания на линии. Ад уже был придуман."
+    },
+    {
+      "id": "sports_score",
+      "tiers": [
+        "calm",
+        "media"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Счёт матча. Кто выиграл — уже не важно. Или важно слишком."
+    },
+    {
+      "id": "lottery_dream_house",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Выиграл бы — купил дом у моря. Море подождёт."
+    },
+    {
+      "id": "learn_guitar",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "regret",
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Всё хотел выучить гитару. Струны есть. Времени… было."
+    },
+    {
+      "id": "spanish_class",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Два года испанского. Помню «hola» и панику."
+    },
+    {
+      "id": "drive_thru",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Окошко драйв-thru. «И картошку?» — да. Всегда да."
+    },
+    {
+      "id": "hotel_ice",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лёд из автомата в отеле. Роскошь щёлкающих кубиков."
+    },
+    {
+      "id": "minibar_guilt",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Мини-бар. Вина и стыд по прайсу."
+    },
+    {
+      "id": "sunday_paper",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Воскресная газета. Кроссворд. Мир решаемый."
+    },
+    {
+      "id": "comic_villain",
+      "tiers": [
+        "calm",
+        "combat"
+      ],
+      "tags": [
+        "zombie_media",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Злодей в комиксах хотя бы монологил. Эти только жуют."
+    },
+    {
+      "id": "slow_zombies_thank",
+      "tiers": [
+        "calm",
+        "combat"
+      ],
+      "tags": [
+        "zombie_media",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Слава богу, они медленные. Голливуд хотя бы это угадал."
+    },
+    {
+      "id": "bite_rules_argue",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "zombie_media",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Укус — конец? Или лотерея? Не хочу проверять."
+    },
+    {
+      "id": "safehouse_fantasy",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Безопасный дом. Забор. Тишина. Сон без ножа под подушкой."
+    },
+    {
+      "id": "garden_tomato",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Свои помидоры. Красные. Настоящие. Мечта фермера-любителя."
+    },
+    {
+      "id": "hot_water_bottle",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тёплая грелка. Звучит жалко. Звучит идеально."
+    },
+    {
+      "id": "birthday_candle",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Свеча на торте. Загадал глупое. Исполнилось чужое."
+    },
+    {
+      "id": "apology_unsaid",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Так и не извинился. Теперь аудитория — вороны."
+    },
+    {
+      "id": "thank_you_unsaid",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не сказал «спасибо». Мелочь. Тяжёлая."
+    },
+    {
+      "id": "enemy_forgiven",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "regret",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Простил бы того урода из школы. Наверное. Почти."
+    },
+    {
+      "id": "clock_tick_miss",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тиканье часов. Сейчас время измеряется шорохами."
+    },
+    {
+      "id": "dance_kitchen",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Танцевали на кухне босиком. Музыка из телефона."
+    },
+    {
+      "id": "stupid_bravery",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Глупая храбрость — мой основной навык. И минус."
+    },
+    {
+      "id": "inventory_tetris",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тетрис в рюкзаке. Побеждаю пространство, проигрываю жизнь."
+    },
+    {
+      "id": "noise_budget",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бюджет шума на сегодня исчерпан. Шёпот только."
+    },
+    {
+      "id": "lucky_sock",
+      "tiers": [
+        "calm",
+        "combat"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Счастливый носок. Наука выживания."
+    },
+    {
+      "id": "knock_wood",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Постучать по дереву. Суеверие дешевле патронов."
+    },
+    {
+      "id": "city_skyline",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Силуэт города. Красивый труп."
+    },
+    {
+      "id": "highway_empty",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пустое шоссе. Мечта водителя. Кошмар пешехода."
+    },
+    {
+      "id": "billboard_smile",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Биллборд всё ещё улыбается. Профессионал."
+    },
+    {
+      "id": "church_lock",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Церковь на замке. Даже богу выходной?"
+    },
+    {
+      "id": "school_yard",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Школьный двор. Мел. Крик. Эхо."
+    },
+    {
+      "id": "gas_station_beef",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Вяленое мясо с заправки. Гурманы бы плакали. Я — нет."
+    },
+    {
+      "id": "map_coffee_stain",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Карта в кофейных пятнах. Навигация по пятнам."
+    },
+    {
+      "id": "whiskey_one",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wish",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Один глоток виски. Для храбрости. Или для честности."
+    },
+    {
+      "id": "lullaby_wrong",
+      "tiers": [
+        "calm",
+        "scared"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Колыбельная сама всплыла. Голос мамы. Держись."
+    },
+    {
+      "id": "end_title_card",
+      "tiers": [
+        "calm",
+        "death"
+      ],
+      "tags": [
+        "zombie_media",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Титры бы уже пошли. Я всё ещё в кадре. Ошибка монтажа."
+    },
+    {
+      "id": "sunrise_shift",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Смена до рассвета. Кофе и тупые шутки. Почти семья.",
+      "prof_bias": [
+        "policeofficer",
+        "securityguard",
+        "fireofficer"
+      ]
+    },
+    {
+      "id": "mechanic_hands",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Руки в мазуте — честнее любого галстука.",
+      "prof_bias": [
+        "mechanic"
+      ]
+    },
+    {
+      "id": "cook_knife_miss",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Настоящая кухня. Запахи. Не банки.",
+      "prof_bias": [
+        "chef",
+        "burgerflipper"
+      ]
+    },
+    {
+      "id": "farm_morning",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Утро на ферме. Туман и работа. Проще, чем это.",
+      "prof_bias": [
+        "farmer"
+      ]
+    },
+    {
+      "id": "final_girl_m",
+      "tiers": [
+        "calm",
+        "scared"
+      ],
+      "tags": [
+        "zombie_media",
+        "joke"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Финальная девушка выживает. Я не девушка. Проблема."
+    },
+    {
+      "id": "final_girl_f",
+      "tiers": [
+        "calm",
+        "scared"
+      ],
+      "tags": [
+        "zombie_media"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Финальная девушка. Ок. Давайте по канону."
+    },
+    {
+      "id": "perfume_ghost_m",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Её духи в лифте. Призрак нормальной жизни."
+    },
+    {
+      "id": "cologne_ghost_f",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "romance"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Его одеколон на куртке. Глупо держать."
+    },
+    {
+      "id": "three_days_beard",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "body",
+        "joke"
+      ],
+      "gender": "male",
+      "soft_dark": false,
+      "ru": "Борода трёх дней. Стиль «не выбирал»."
+    },
+    {
+      "id": "makeup_smudge_f",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "body",
+        "joke"
+      ],
+      "gender": "female",
+      "soft_dark": false,
+      "ru": "Тушь размазалась ещё в прошлой жизни."
+    },
+    {
+      "id": "hospital_smell",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Запах больницы вспоминается сам. Спасибо, мозг.",
+      "prof_bias": [
+        "nurse",
+        "doctor"
+      ]
+    },
+    {
+      "id": "badge_number",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Номер жетона наизусть. Личность в цифрах.",
+      "prof_bias": [
+        "policeofficer"
+      ]
+    },
+    {
+      "id": "boss_email",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Письмо от босса «срочно». Срочность переоценена."
+    }
+  ]
+}

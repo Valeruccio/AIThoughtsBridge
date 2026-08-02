@@ -1,0 +1,40 @@
+{
+  "active_provider": "deepseek",
+  "providers": {
+    "deepseek": {
+      "label": "DeepSeek API",
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-chat",
+      "api_key": "",
+      "requires_key": true
+    },
+    "ollama": {
+      "label": "Ollama (local)",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "model": "llama3.2",
+      "api_key": "ollama",
+      "requires_key": false
+    },
+    "lmstudio": {
+      "label": "LM Studio",
+      "base_url": "http://127.0.0.1:1234/v1",
+      "model": "local-model",
+      "api_key": "lm-studio",
+      "requires_key": false
+    },
+    "openrouter": {
+      "label": "OpenRouter",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "deepseek/deepseek-chat",
+      "api_key": "",
+      "requires_key": true
+    },
+    "custom": {
+      "label": "Custom OpenAI-compatible",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "model": "model-name",
+      "api_key": "",
+      "requires_key": false
+    }
+  }
+}

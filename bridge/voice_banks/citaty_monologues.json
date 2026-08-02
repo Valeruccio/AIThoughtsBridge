@@ -1,0 +1,1709 @@
+{
+  "version": 1,
+  "monologues": [
+    {
+      "id": "cit_black_day",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "money"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Откладывать на чёрный день… а другие дни-то бывают?",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_dont_touch",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "romance"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не прикасайся… обычно это плохо кончается.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_why_die",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "hate",
+        "soft_dark"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Почему все просто не могут… взять и сдохнуть?",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_wrong_burial",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "death"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кажется, похоронили не того. Не парься — придёт и мой день.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_garbage",
+      "tiers": [
+        "uneasy",
+        "combat"
+      ],
+      "tags": [
+        "hate",
+        "swagger"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Буду краток. Мусор.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_hell_home",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Нет хуже ада, чем чужой дом… или свой.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_dont_babble",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не болтай — думай. Хорошее жизненное правило.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_street_cat",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Нет ничего печальнее уличного кота, который считает себя домашним.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_threat_remove",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "advice",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Есть угроза — убери её. И не стыдись, если стало легче.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_live_or_habit",
+      "tiers": [
+        "uneasy",
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "soft_dark",
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Не знаю — хочу жить… или просто привыкла.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_optimist_fall",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Одно хорошо: сорвёмся — так насмерть. Я по жизни оптимист.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_make_a_move",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Нельзя же думать вечно. Рано или поздно — ход.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_fight_or_die",
+      "tiers": [
+        "scared",
+        "panic",
+        "combat"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не будешь бороться — умрёшь. Просто.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_grow_up",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Взрослеть — значит привыкать к миру. Даже к этому.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_time_slips",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "regret",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ждём подходящего момента сказать важное… а время уже утекло.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_pain_place",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "body",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Боль не уйдёт. Просто оставь ей место.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_time_ends",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Всегда думаем, что времени хватит. А потом оно кончается.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_eyes_open",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Глаза открыты — а всё равно ничего не видел.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_good_still_die",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "То, что мы хорошие, ещё не значит, что мы не умрём.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_mean_alive",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лучше злой и живой, чем добрый и мёртвый.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_become_essence",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Есть вещи, от которых не сбежать. Они становятся твоей сутью.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_die_for",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Найди то, ради чего стоит умереть… и не желай найти слишком быстро.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_brain_main",
+      "tiers": [
+        "calm",
+        "combat"
+      ],
+      "tags": [
+        "joke",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Главное — мозг. Не тупи.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_coward_worse",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Идиот опасен. Трус — опаснее.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_fix_it",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Думай не о том, что могло пойти не так — а как это чинить.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_be_kinder",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "advice",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Будьте добрее… будто сегодня последний день. Эх.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_weak_done",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "hate",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Мир не изменился. Слабым — крышка. Как раньше.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_threat_smoke",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "joke",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Забавно: стоит пригрозить смертью — и у всех подгорает.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_saving_hard",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Спасение людей — тяжёлый труд. Не благодарный.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_fall_optimist",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Плюс: упадём — разобьёмся насмерть. Оптимист во мне жив.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_someone_takes",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Есть что-то хорошее — найдётся тот, кто захочет отнять.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_nostalgia_drug",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Ностальгия — наркотик. Искажает реальность. Опасно.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_fear_shrinks",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Чем сильнее боятся — тем глупее. Страх уменьшает мозг.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_care_pain",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "regret",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Заботишься о ком-то — боль идёт в комплекте.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_god_laughs",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Бог смеётся, пока мы строим планы.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_forget_people",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Так долго бежишь от мёртвых — забываешь, на что способны живые.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_not_just_survive",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Нельзя просто выживать. Надо… пережить.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_life_short",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Жизнь только кажется длинной.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_bullet_last",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "guns",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пуля — крайняя мера. Крайняя уже близко.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_food_chain",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Каждый — еда для кого-то ещё. Приятная мысль.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_nearest_boat",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тонешь — плыви к ближайшей шлюпке, не через всё море.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_anger_kills",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Гнев отшибает мозги. А глупость убивает.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_hard_to_trust",
+      "tiers": [
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Тяжело верить тому, кто улыбается, получив по морде.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_middle_finger",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "joke",
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Вселенная шлёт знак — а ты ей средний палец.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_only_self",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "soft_dark",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Сколько людей убил?… Только себя. По кусочкам.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_nightmares_end",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кошмарам приходит конец. Нельзя дать им победить.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_boredom_lucky",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Душит скука… Значит, повезло. Можно скучать — уже кайф.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_no_fear_back",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Нельзя возвращаться из-за страха.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_dead_everywhere",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Мёртвые повсюду. Живые всё меньше похожи на людей.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_their_world",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear",
+        "zombie"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Это их мир. Мы в нём всего лишь живём.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_not_dying_today",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сегодня не собираюсь умирать. Проблема — кто-то из нас ошибётся.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_accept_or_eat",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Случилось. Смирись — иначе съест изнутри.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_finger_off",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "guns",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Палец на курок — только если готов стрелять.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_tomorrow_may",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Отложить на завтра? Завтра может и не быть.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_apocalypse_boring",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Приятно иметь занятие. Никто не знал, каким скучным окажется конец света.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_looting_rule",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Первое правило: в этом мире остались только спрятанные вещи.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_cant_survive_doubt",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не знаю, смогу ли выжить… Значит — нет.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_play_or_toy",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Играй — или будешь игрушкой.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_lose_one",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Не готов потерять одного — потеряешь всех.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_puppies_dead",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Думай о хорошем… о щенках. О мёртвых щенках. Отлично.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_no_surrender",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сдаваться живыми нельзя.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_fake_it",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Притворяйся, пока не станет правдой. Старый трюк.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_safe_alive",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Быть в безопасности — значит быть живым. Точка.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_kind_wont",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Нельзя быть добреньким и рассчитывать выжить.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_lose_by_will",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Странно терять человека по его же воле.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_heaven_lie",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "soft_dark",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Рай — очередная ложь. Веришь — идиот.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_words_weak",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Слова бывают беспомощны. Иногда их просто не хватает.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_comfort_weak",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Расслабимся — комфорт ослабит. Как гниль.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_anger_dumb",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "hate"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Злость делает тупым. Из-за тупости и гибнут.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_nice_got_nowhere",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Милый характер ни к чему не привёл. А вот ум — да.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_dead_haunt",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear",
+        "zombie"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Выживших всегда будут преследовать мёртвые.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_better_books",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Знал бы, что миру конец — взял бы книги получше.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_was_nobody",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кем был до всего этого? Никем. Пустым местом.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_hurt_survive",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пострадавшие опасны — они знают, как выживать.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_habits_useless",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Мозг хранит привычки даже когда они уже бесполезны.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_crack_light",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Иногда можно дать трещину — чтобы впустить свет.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_soul_pieces",
+      "tiers": [
+        "uneasy",
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "soft_dark",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Сколько кусков души можно потерять, прежде чем перестанешь чувствовать себя человеком?",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_people_die",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Люди и раньше умирали. Это нельзя остановить.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_wait_death",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "soft_dark",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Есть кое-что страшнее смерти — день за днём её ждать.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_hell_full",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "zombie",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Когда в аду не останется места — мёртвые будут среди нас. Уже.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_too_good",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "fear",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Выглядит слишком хорошо, чтобы быть правдой… значит, так и есть.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_wrong_river",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Сидишь на берегу ждать труп врага… а река — не та.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_fire_family",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Все рыжие… не семья, а пожар.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_wine_choice",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В винах не разбираюсь. Главное вовремя сказать: прекрасный выбор.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_alstro",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Аллергия на цветы — вот и весь мой ботанический талант.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_stagnation",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В отношениях стагнация. Второй «пошёл вон» за полдня.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_sharks",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Поздно драпать, когда акулы уже ноги доедают.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_nerves_pork",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Нервные клетки, как сгоревшая свинина, не восстанавливаются.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_food_life",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "food",
+        "desire"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Еда — страсть. Еда — любовь. Еда — жизнь. Даже сейчас.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_old_for_this",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "joke",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Я слишком стар для всего этого дерьма.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_storm_better",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "joke",
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лучше обделаться в шторм, чем от прогноза погоды.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_telepathy_gun",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "guns",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лучший способ передать мысль на расстояние — прицельный выстрел.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_drink_measure",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Когда квасишь — соблюдай меру. Иначе выпьешь меньше.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_lady_luck",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "joke",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Леди Удача — обыкновенная… а наличные кончились.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_broken_mirror",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "memory",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Прошлое — разбитое зеркало. Собираешь осколки — режешься.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_kind_eyes",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Глаза добрые. Рубашка — смирительная.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_run_chase",
+      "tiers": [
+        "scared",
+        "panic"
+      ],
+      "tags": [
+        "fear",
+        "body"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Чем быстрее бежишь, тем больше кажется, что тебя в самом деле преследуют.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_no_happy_end",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "soft_dark"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Спастись — не для меня. Хэппи-энда не будет.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_evidence_late",
+      "tiers": [
+        "combat",
+        "scared"
+      ],
+      "tags": [
+        "guns",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Собирать улики поздно уже пару сотен патронов назад.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_wife_dream",
+      "tiers": [
+        "calm",
+        "uneasy",
+        "death"
+      ],
+      "tags": [
+        "memory",
+        "soft_dark"
+      ],
+      "gender": "male",
+      "soft_dark": true,
+      "ru": "Мне снилась жена. Она была мертва… и всё было в порядке.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_bloody_valentines",
+      "tiers": [
+        "scared",
+        "death"
+      ],
+      "tags": [
+        "soft_dark",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "А смерть писала мне кровавые валентинки.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_worse_coming",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кажется, всё самое ужасное уже было… и тут надвигается ещё хуже.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_gun_courtesy",
+      "tiers": [
+        "scared",
+        "combat"
+      ],
+      "tags": [
+        "guns",
+        "swagger"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Дуло смотрело в лицо. Ответил любезностью на любезность.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_devil_snow",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "weather",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Снег падал, как конфетти на празднике дьявола.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_bye_dream",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "regret",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Скоро рассвет. Прощай, американская мечта… или любая.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_end_personal",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Конец света у каждого свой. Если придёт — не покажется банальным.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_dead_talk",
+      "tiers": [
+        "scared",
+        "uneasy"
+      ],
+      "tags": [
+        "fear",
+        "zombie"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Покойники знают ответы. И начав говорить — уже не замолчат.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_love_illusion",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "romance",
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Любовь — когда тебе вручают иллюзию выбора.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_push_first",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "hate",
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Даже на краю пропасти думают, кого спихнуть первым… а не как спастись.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_hide_pro",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "joke",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "В детстве в прятки играл профессионально. Меня до сих пор некоторые ищут.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_mirror_blame",
+      "tiers": [
+        "uneasy",
+        "scared"
+      ],
+      "tags": [
+        "regret"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Кто виноват? Добро пожаловать к зеркалу.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_simple_joy",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "wonder",
+        "memory"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Радуемся простому… не всегда понимая, что простое — и есть ценное.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_veg_meat",
+      "tiers": [
+        "calm"
+      ],
+      "tags": [
+        "joke",
+        "food"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Любое вегетарианское блюдо вкуснее с мясом. Факт.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_best_not_good",
+      "tiers": [
+        "uneasy",
+        "calm"
+      ],
+      "tags": [
+        "joke"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Лучший — не значит хороший. Значит, остальные хуже.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_alone_wait_death",
+      "tiers": [
+        "death",
+        "scared"
+      ],
+      "tags": [
+        "soft_dark"
+      ],
+      "gender": "any",
+      "soft_dark": true,
+      "ru": "Страшнее смерти — сидеть и ждать её каждый день.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_humanity_choice",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "wonder"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Мир, каким знали — исчез. Но человечность — всё ещё выбор.",
+      "source": "citaty_parser"
+    },
+    {
+      "id": "cit_realist_road",
+      "tiers": [
+        "calm",
+        "uneasy"
+      ],
+      "tags": [
+        "advice"
+      ],
+      "gender": "any",
+      "soft_dark": false,
+      "ru": "Пессимист бьётся головой, оптимист спотыкается. Реалист выбирает дорогу сам.",
+      "source": "citaty_parser"
+    }
+  ]
+}

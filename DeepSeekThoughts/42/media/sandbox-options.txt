@@ -1,0 +1,43 @@
+VERSION = 1,
+
+option DeepSeekThoughts.Enabled
+{
+    type = boolean,
+    default = true,
+    page = DeepSeekThoughts,
+    translation = DeepSeekThoughts_Enabled,
+}
+
+option DeepSeekThoughts.DialogueEnabled
+{
+    type = boolean,
+    default = true,
+    page = DeepSeekThoughts,
+    translation = DeepSeekThoughts_DialogueEnabled,
+}
+
+option DeepSeekThoughts.DialogueAttractsZombies
+{
+    type = boolean,
+    default = true,
+    page = DeepSeekThoughts,
+    translation = DeepSeekThoughts_DialogueAttractsZombies,
+}
+
+option DeepSeekThoughts.SmallTalkEnabled
+{
+    type = boolean,
+    default = true,
+    page = DeepSeekThoughts,
+    translation = DeepSeekThoughts_SmallTalkEnabled,
+}
+
+option DeepSeekThoughts.BanterHeat
+{
+    type = enum,
+    default = normal,
+    numValues = 3,
+    valueTranslation = DeepSeekThoughts_BanterHeat_value,
+    page = DeepSeekThoughts,
+    translation = DeepSeekThoughts_BanterHeat,
+}

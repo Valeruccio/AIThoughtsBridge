@@ -1,0 +1,11 @@
+{
+  "Sandbox_DeepSeekThoughts": "AI Thoughts",
+  "DeepSeekThoughts_Enabled": "Включить мысли",
+  "DeepSeekThoughts_DialogueEnabled": "Диалоги между игроками",
+  "DeepSeekThoughts_DialogueAttractsZombies": "Диалоги привлекают зомби",
+  "DeepSeekThoughts_SmallTalkEnabled": "Светская беседа в спокойствии",
+  "DeepSeekThoughts_BanterHeat": "Жёсткость подколов",
+  "DeepSeekThoughts_BanterHeat_value_option1": "Мягко",
+  "DeepSeekThoughts_BanterHeat_value_option2": "Нормально",
+  "DeepSeekThoughts_BanterHeat_value_option3": "Остро"
+}
