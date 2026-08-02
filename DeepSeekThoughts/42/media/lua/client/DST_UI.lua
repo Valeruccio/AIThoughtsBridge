@@ -86,7 +86,7 @@ function DSThoughtsPanel:createChildren()
     self:addChild(self.closeBtn)
 
     self.hint = ISLabel:new(pad + (btnW + 10) * 2, y + 4, FONT_HGT_SMALL,
-        "",
+        "Home — диалог рядом",
         0.75, 0.85, 0.7, 1, UIFont.Small, true)
     self.hint:initialise()
     self:addChild(self.hint)

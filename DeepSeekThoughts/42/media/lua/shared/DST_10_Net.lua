@@ -193,6 +193,7 @@ function N.slimDialogueEvent(ev)
         language = ev.language or (C and C.Language) or "ru",
         swear_level = ev.swear_level or (C and C.SwearLevel) or "light",
         nearby = nearby,
+        force = ev.force and true or false,
     }
 end
 

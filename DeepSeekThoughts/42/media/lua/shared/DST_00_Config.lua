@@ -65,6 +65,9 @@ C.StatusRelPath = "DeepSeekThoughts/status.txt"
 C.IoRootRel = "DeepSeekThoughts"
 
 C.SettingsKeyName = "F9"
+-- Force nearby dialogue (default Home). Client keycode; override via settings later if needed.
+C.ForceDialogueKey = "HOME"
+C.ForceDialogueCooloffSec = 5
 C.Debug = false
 
 --- Sanitize folder segment for per-player IO

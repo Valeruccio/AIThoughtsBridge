@@ -621,8 +621,9 @@ local function onDialogueEvent(player, args)
         sendTo(player, N.CMD_DIALOGUE_ERROR, { error = "bad_trigger", trigger = trigger })
         return
     end
+    local force = args.force and true or false
     local isSmall = DSThoughts.Banter and DSThoughts.Banter.isSmallTalkTrigger and DSThoughts.Banter.isSmallTalkTrigger(trigger)
-    if isSmall and C.SmallTalkEnabled == false then
+    if isSmall and C.SmallTalkEnabled == false and not force then
         return
     end
     if not rateOk(player) then
@@ -639,8 +640,12 @@ local function onDialogueEvent(player, args)
     for i = 1, #parts do keys[i] = parts[i].key end
     local gk = (D and D.groupKey and D.groupKey(keys)) or table.concat(keys, "|")
     local now = nowSec()
-    if groupCooloff[gk] and now < groupCooloff[gk] then
+    if (not force) and groupCooloff[gk] and now < groupCooloff[gk] then
         return
+    end
+    if force then
+        groupCooloff[gk] = nil
+        log("force dialogue trigger=" .. trigger)
     end
 
     local x = tonumber(args.x) or (player.getX and player:getX()) or 0

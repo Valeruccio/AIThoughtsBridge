@@ -128,10 +128,11 @@ function DC.sendEvent(trigger, opts)
     local player = getPlayer()
     if not player or player:isDead() then return false end
 
+    local force = opts.force and true or false
     local def = DSThoughts.Dialogue and DSThoughts.Dialogue.triggerDef and DSThoughts.Dialogue.triggerDef(trigger)
     local cool = (def and def.cooloff) or 90
     local coolKey = trigger .. ":" .. tostring(opts.focus_key or "")
-    if triggerCooling(coolKey, cool) then return false end
+    if (not force) and triggerCooling(coolKey, cool) then return false end
 
     local nearby = DC.collectNearby(player, C.DialogueStartRadius or 8)
     if #nearby < 1 and not opts.allow_solo then
@@ -165,6 +166,7 @@ function DC.sendEvent(trigger, opts)
         language = C.Language or "ru",
         swear_level = C.SwearLevel or "light",
         nearby = nearby,
+        force = force,
     }
 
     local N = DSThoughts.Net
@@ -475,5 +477,87 @@ function DC.trySmallTalk(player, nearby, sit)
         address_hint = topic.address or "all",
     })
 end
+
+--- Forced dialogue (Home by default): start a casual talk with nearby players now.
+DC._lastForceAt = DC._lastForceAt or 0
+
+function DC.forceDialogue()
+    if C.Enabled == false or C.DialogueEnabled == false then return false end
+    if not DC.canNetwork() then return false end
+    local player = getPlayer()
+    if not player or player:isDead() then return false end
+
+    local gap = tonumber(C.ForceDialogueCooloffSec) or 5
+    if (nowSec() - (DC._lastForceAt or 0)) < gap then
+        return false
+    end
+
+    local nearby = DC.collectNearby(player, C.DialogueStartRadius or 8)
+    if #nearby < 1 then
+        C.log("Force dialogue: nobody nearby")
+        return false
+    end
+
+    local focus = nearby[1]
+    local traits = {}
+    local profession = "unemployed"
+    local affinity = 0
+    pcall(function()
+        if DSThoughts.State and DSThoughts.State.collect then
+            local snap = DSThoughts.State.collect(player)
+            if snap and snap.character then
+                traits = snap.character.traits or {}
+                profession = snap.character.profession or profession
+            end
+        end
+        if DSThoughts.Memory and DSThoughts.Memory.getPair then
+            local row = DSThoughts.Memory.getPair(playerKey(player), focus.key)
+            if row then affinity = tonumber(row.affinity) or 0 end
+        end
+    end)
+
+    local topicId = "smalltalk_ask"
+    local address = "named"
+    if DSThoughts.Banter and DSThoughts.Banter.pickTopic then
+        local topic = DSThoughts.Banter.pickTopic(traits, profession, affinity, true)
+        if topic and topic.id then
+            topicId = topic.id
+            address = topic.address or address
+        end
+    end
+
+    DC._lastForceAt = nowSec()
+    local ok = DC.sendEvent(topicId, {
+        force = true,
+        focus_key = focus.key,
+        focus_name = focus.name,
+        focus_female = focus.female,
+        address_hint = address,
+    })
+    if ok then
+        C.log("Force dialogue → " .. tostring(topicId))
+    end
+    return ok
+end
+
+local function forceDialogueKeyCode()
+    local name = tostring(C.ForceDialogueKey or "HOME"):upper()
+    if Keyboard and Keyboard["KEY_" .. name] then
+        return Keyboard["KEY_" .. name]
+    end
+    if Keyboard and Keyboard.KEY_HOME then
+        return Keyboard.KEY_HOME
+    end
+    return nil
+end
+
+local function onForceDialogueKey(key)
+    local want = forceDialogueKeyCode()
+    if not want or key ~= want then return end
+    if not getPlayer() then return end
+    DC.forceDialogue()
+end
+
+Events.OnKeyPressed.Add(onForceDialogueKey)
 
 C.log("DialogueClient loaded")
