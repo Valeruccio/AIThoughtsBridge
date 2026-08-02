@@ -17,7 +17,9 @@ end
 
 DC._lastTriggerAt = DC._lastTriggerAt or {}
 DC._inDialogue = false
-DC._sticky = DC._sticky or { text = nil, startMs = 0, durationMs = 8000, kind = "dialogue" }
+DC._sticky = DC._sticky or {
+    text = nil, startMs = 0, durationMs = 8000, kind = "dialogue", speaker = nil,
+}
 
 local function nowSec()
     return (getTimestamp and getTimestamp()) or (os and os.time and os.time()) or 0
@@ -183,12 +185,15 @@ function DC.sendEvent(trigger, opts)
     return ok
 end
 
-function DC.showLine(displayText)
+--- Sticky overhead: MUST be anchored to the speaker IsoPlayer, never getPlayer() default.
+function DC.showLine(displayText, speaker)
     if not displayText or displayText == "" then return end
+    if not speaker then return end
     if #displayText > 240 then
         displayText = string.sub(displayText, 1, 237) .. "..."
     end
     DC._sticky.text = displayText
+    DC._sticky.speaker = speaker
     DC._sticky.startMs = nowMs()
     DC._sticky.durationMs = math.floor((C.DialogueDisplaySeconds or 8) * 1000)
     DC._sticky.kind = "dialogue"
@@ -196,14 +201,24 @@ end
 
 function DC.drawSticky()
     if not DC._sticky.text then return end
-    local player = getPlayer()
-    if not player or player:isDead() then
+    local speaker = DC._sticky.speaker
+    if not speaker then
         DC._sticky.text = nil
+        return
+    end
+    local dead = false
+    pcall(function()
+        if speaker.isDead and speaker:isDead() then dead = true end
+    end)
+    if dead then
+        DC._sticky.text = nil
+        DC._sticky.speaker = nil
         return
     end
     local elapsed = nowMs() - DC._sticky.startMs
     if elapsed >= DC._sticky.durationMs then
         DC._sticky.text = nil
+        DC._sticky.speaker = nil
         return
     end
     local fadeMs = 1100
@@ -212,65 +227,181 @@ function DC.drawSticky()
     if remaining < fadeMs then
         alpha = remaining / fadeMs
     end
-    local pn = player:getPlayerNum()
-    local x = isoToScreenX(pn, player:getX(), player:getY(), player:getZ())
-    local y = isoToScreenY(pn, player:getX(), player:getY(), player:getZ()) - 78
+    -- Use local camera playerNum; world XYZ from the SPEAKER
+    local cam = getPlayer()
+    if not cam then return end
+    local pn = cam:getPlayerNum()
+    local sx, sy, sz = speaker:getX(), speaker:getY(), speaker:getZ()
+    local x = isoToScreenX(pn, sx, sy, sz)
+    local y = isoToScreenY(pn, sx, sy, sz) - 78
     -- Warm spoken-line color (distinct from cool thought blue)
     getTextManager():DrawStringCentre(UIFont.Medium, x, y, DC._sticky.text, 1.0, 0.86, 0.55, alpha)
 end
 
---- Find IsoPlayer who should speak this line (local or remote representation).
-local function resolveSpeakerPlayer(args)
-    local me = getPlayer()
-    if not me then return nil, false end
-    local speakerId = tonumber(args.speaker_online_id) or 0
-    local speakerKey = tostring(args.speaker_key or "")
-    local myId = onlineId(me)
-    local isMe = (speakerId ~= 0 and speakerId == myId)
-        or (speakerKey ~= "" and speakerKey == playerKey(me))
-    if isMe then
-        return me, true
-    end
-    local found = nil
-    pcall(function()
-        if not getOnlinePlayers then return end
-        local players = getOnlinePlayers()
-        if not players then return end
-        for i = 0, players:size() - 1 do
-            local p = players:get(i)
-            if p then
-                local match = (speakerId ~= 0 and onlineId(p) == speakerId)
-                    or (speakerKey ~= "" and playerKey(p) == speakerKey)
-                if match then
-                    found = p
-                    break
-                end
-            end
-        end
-    end)
-    return found, false
-end
-
-local function showHaloOverSpeaker(speaker, text)
+local function nameMatches(player, target)
+    if not player or target == "" then return false end
+    local t = string.lower(target)
     local ok = false
     pcall(function()
-        if HaloTextHelper and HaloTextHelper.addText then
-            HaloTextHelper.addText(speaker, text, 255, 220, 140)
-            ok = true
+        if player.getUsername then
+            local u = tostring(player:getUsername() or ""):lower()
+            if u ~= "" and u == t then ok = true return end
         end
-    end)
-    if ok then return true end
-    pcall(function()
-        if HaloTextHelper and HaloTextHelper.addText then
-            HaloTextHelper.addText(speaker, text)
-            ok = true
+        local desc = player.getDescriptor and player:getDescriptor() or nil
+        if desc and desc.getForename then
+            local f = tostring(desc:getForename() or ""):lower()
+            if f ~= "" and f == t then ok = true return end
+            if desc.getSurname then
+                local full = (f .. " " .. tostring(desc:getSurname() or ""):lower()):gsub("%s+$", "")
+                if full == t then ok = true return end
+            end
         end
+        local cn = string.lower(charName(player))
+        if cn == t then ok = true end
     end)
     return ok
 end
 
---- Apply DialogueLine on EVERY client: halo over the speaker IsoPlayer.
---- Zombie attract only if we are the local speaker and line is not quiet.
+--- Find IsoPlayer who should speak this line (local or remote). Never invent local fallback.
+local function resolveSpeakerPlayer(args)
+    args = args or {}
+    local me = getPlayer()
+    local speakerId = tonumber(args.speaker_online_id) or 0
+    local speakerKey = tostring(args.speaker_key or "")
+    local speakerName = tostring(args.speaker_name or args.speaker or "")
+
+    -- 1) Online ID (preferred in MP)
+    if speakerId ~= 0 then
+        local byId = nil
+        pcall(function()
+            if getPlayerByOnlineID then
+                byId = getPlayerByOnlineID(speakerId)
+            end
+        end)
+        if byId then
+            local isMe = me and onlineId(me) == speakerId
+            return byId, isMe and true or false
+        end
+        local found = nil
+        pcall(function()
+            if not getOnlinePlayers then return end
+            local players = getOnlinePlayers()
+            if not players then return end
+            for i = 0, players:size() - 1 do
+                local p = players:get(i)
+                if p and onlineId(p) == speakerId then
+                    found = p
+                    break
+                end
+            end
+        end)
+        if found then
+            local isMe = me and onlineId(me) == speakerId
+            return found, isMe and true or false
+        end
+    end
+
+    -- 2) Stable player key
+    if speakerKey ~= "" then
+        if me and playerKey(me) == speakerKey then
+            return me, true
+        end
+        local found = nil
+        pcall(function()
+            if not getOnlinePlayers then return end
+            local players = getOnlinePlayers()
+            if not players then return end
+            for i = 0, players:size() - 1 do
+                local p = players:get(i)
+                if p and playerKey(p) == speakerKey then
+                    found = p
+                    break
+                end
+            end
+        end)
+        if found then
+            return found, false
+        end
+    end
+
+    -- 3) Display / username / forename
+    if speakerName ~= "" then
+        if me and nameMatches(me, speakerName) then
+            return me, true
+        end
+        local found = nil
+        pcall(function()
+            if not getOnlinePlayers then return end
+            local players = getOnlinePlayers()
+            if not players then return end
+            for i = 0, players:size() - 1 do
+                local p = players:get(i)
+                if p and nameMatches(p, speakerName) then
+                    found = p
+                    break
+                end
+            end
+        end)
+        if found then
+            return found, false
+        end
+    end
+
+    return nil, false
+end
+
+--- B42 HaloTextHelper: ColorInfo / addGoodText — never raw RGB doubles.
+local function showHaloOverSpeaker(speaker, text)
+    if not speaker or not text or text == "" then return false end
+    if not HaloTextHelper then return false end
+
+    local col = nil
+    pcall(function()
+        if HaloTextHelper.getGoodColor then
+            col = HaloTextHelper.getGoodColor()
+        elseif HaloTextHelper.getColorGreen then
+            col = HaloTextHelper.getColorGreen()
+        elseif getCore and getCore().getGoodHighlitedColor then
+            col = getCore():getGoodHighlitedColor()
+        end
+    end)
+
+    local ok = false
+    if col and HaloTextHelper.addText then
+        pcall(function()
+            HaloTextHelper.addText(speaker, text, "[br/]", col)
+            ok = true
+        end)
+        if ok then return true end
+        pcall(function()
+            HaloTextHelper.addText(speaker, text, col)
+            ok = true
+        end)
+        if ok then return true end
+    end
+    if HaloTextHelper.addGoodText then
+        pcall(function()
+            HaloTextHelper.addGoodText(speaker, text, "[br/]")
+            ok = true
+        end)
+        if ok then return true end
+        pcall(function()
+            HaloTextHelper.addGoodText(speaker, text)
+            ok = true
+        end)
+        if ok then return true end
+    end
+    if HaloTextHelper.addText then
+        pcall(function()
+            HaloTextHelper.addText(speaker, text)
+            ok = true
+        end)
+    end
+    return ok
+end
+
+--- Apply DialogueLine on EVERY client: ONE overhead visual over the speaker IsoPlayer.
+--- No Say() — avoids green duplicate under halo. Zombie attract only for local speaker.
 function DC.onDialogueLine(args)
     args = args or {}
     DC._inDialogue = true
@@ -287,21 +418,23 @@ function DC.onDialogueLine(args)
     end
 
     local speaker, isLocalSpeaker = resolveSpeakerPlayer(args)
-    local haloOk = false
-    if speaker then
-        haloOk = showHaloOverSpeaker(speaker, text)
-        if isLocalSpeaker then
-            pcall(function()
-                if speaker.Say then speaker:Say(text) end
-            end)
-        end
+    if not speaker then
+        C.log("DialogueLine SKIP — speaker not found oid="
+            .. tostring(args.speaker_online_id)
+            .. " key=" .. tostring(args.speaker_key)
+            .. " name=" .. tostring(args.speaker or args.speaker_name))
+        return
     end
 
+    local haloOk = showHaloOverSpeaker(speaker, text)
     if not haloOk then
-        DC.showLine(args.display or text)
-        C.log("DialogueLine fallback sticky speaker="
+        -- Last resort: sticky DrawString over the SAME speaker IsoPlayer (not local camera player)
+        DC.showLine(args.display or text, speaker)
+        C.log("DialogueLine sticky speaker="
             .. tostring(args.speaker) .. " local=" .. tostring(isLocalSpeaker))
     else
+        DC._sticky.text = nil
+        DC._sticky.speaker = nil
         C.log("DialogueLine halo speaker=" .. tostring(args.speaker)
             .. " local=" .. tostring(isLocalSpeaker))
     end
@@ -314,7 +447,7 @@ function DC.onDialogueLine(args)
         attracts = false
     end
 
-    if isLocalSpeaker and speaker and attracts then
+    if isLocalSpeaker and attracts then
         local r = C.DialogueSoundRadius or 18
         local vol = (DSThoughts.Dialogue and DSThoughts.Dialogue.SOUND_VOLUME) or 60
         if DSThoughts.B42 and DSThoughts.B42.attractZombies then
