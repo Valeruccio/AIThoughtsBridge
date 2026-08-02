@@ -1,6 +1,7 @@
 --[[
   Client: detect serious dialogue triggers and send DialogueEvent to host.
-  Also helpers to render dialogue lines + optional zombie-attracting Say.
+  Dialogue lines always play as Say bubbles on the speaker's client (MP syncs).
+  Quiet small talk: Say without zombie attract. Serious: Say + optional attract.
 ]]
 
 DSThoughts = DSThoughts or {}
@@ -216,49 +217,84 @@ function DC.drawSticky()
     getTextManager():DrawStringCentre(UIFont.Medium, x, y, DC._sticky.text, 1.0, 0.86, 0.55, alpha)
 end
 
---- Apply DialogueLine from server: subtitle + optional Say/world sound.
+--- Find IsoPlayer who should speak this line (prefer local player when we are speaker).
+local function resolveSpeakerPlayer(args)
+    local me = getPlayer()
+    if not me then return nil, false end
+    local speakerId = tonumber(args.speaker_online_id) or 0
+    local speakerKey = tostring(args.speaker_key or "")
+    local myId = onlineId(me)
+    local isMe = (speakerId ~= 0 and speakerId == myId)
+        or (speakerKey ~= "" and speakerKey == playerKey(me))
+    if isMe then
+        return me, true
+    end
+    -- Fallback: locate speaker among online players (local Say if object is usable)
+    local found = nil
+    pcall(function()
+        if not getOnlinePlayers then return end
+        local players = getOnlinePlayers()
+        if not players then return end
+        for i = 0, players:size() - 1 do
+            local p = players:get(i)
+            if p then
+                local match = (speakerId ~= 0 and onlineId(p) == speakerId)
+                    or (speakerKey ~= "" and playerKey(p) == speakerKey)
+                if match then
+                    found = p
+                    break
+                end
+            end
+        end
+    end)
+    return found or me, false
+end
+
+--- Apply DialogueLine: always Say bubble on speaker. Zombie attract only if not quiet.
 function DC.onDialogueLine(args)
     args = args or {}
     DC._inDialogue = true
-    local display = args.display or args.text or ""
-    DC.showLine(display)
 
-    local player = getPlayer()
-    if not player then return end
+    local text = tostring(args.text or "")
+    if text == "" then return end
+    if #text > 200 then text = string.sub(text, 1, 197) .. "..." end
 
     local quiet = args.quiet and true or false
     local trigger = tostring(args.trigger or "")
-    if quiet or (DSThoughts.Banter and DSThoughts.Banter.isSmallTalkTrigger and DSThoughts.Banter.isSmallTalkTrigger(trigger)) then
-        -- Quiet small talk: subtitle only, never Say / addSound
+    if (not quiet) and DSThoughts.Banter and DSThoughts.Banter.isSmallTalkTrigger
+        and DSThoughts.Banter.isSmallTalkTrigger(trigger) then
+        quiet = true
+    end
+
+    local speaker, isLocalSpeaker = resolveSpeakerPlayer(args)
+    if not speaker or not isLocalSpeaker then
+        -- Only the speaking player's client runs Say (game syncs the bubble to others).
         return
     end
 
-    local myId = onlineId(player)
-    local speakerId = tonumber(args.speaker_online_id) or 0
-    local isSpeaker = (speakerId ~= 0 and speakerId == myId)
-        or (args.speaker_key and args.speaker_key == playerKey(player))
+    pcall(function()
+        if speaker.Say then
+            speaker:Say(text)
+        end
+    end)
 
     local attracts = args.attracts_zombies
     if attracts == nil then
         attracts = C.DialogueAttractsZombies ~= false
     end
+    if quiet then
+        attracts = false
+    end
 
-    if isSpeaker and attracts then
-        local text = tostring(args.text or "")
-        if #text > 200 then text = string.sub(text, 1, 197) .. "..." end
-        pcall(function()
-            if player.Say then
-                player:Say(text)
-            end
-        end)
+    if attracts then
         local r = C.DialogueSoundRadius or 18
         local vol = (DSThoughts.Dialogue and DSThoughts.Dialogue.SOUND_VOLUME) or 60
         if DSThoughts.B42 and DSThoughts.B42.attractZombies then
-            DSThoughts.B42.attractZombies(player, r, vol)
+            DSThoughts.B42.attractZombies(speaker, r, vol)
         else
             pcall(function()
                 if addSound then
-                    addSound(player, player:getX(), player:getY(), player:getZ(), r, vol)
+                    addSound(speaker, speaker:getX(), speaker:getY(), speaker:getZ(), r, vol)
                 end
             end)
         end
