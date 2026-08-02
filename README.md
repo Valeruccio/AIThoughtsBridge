@@ -25,9 +25,14 @@ cd d:\zomboid_mods
 
 ### 2) Поставить мод в игру
 
+**Источник правды — git.** После `git clone` / `git pull` на **каждом** компе (хост и клиенты):
+
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\install_mod.ps1
 ```
+
+Скрипт зеркалит `DeepSeekThoughts/` → `%USERPROFILE%\Zomboid\mods\DeepSeekThoughts` (полная замена).  
+Иначе MP ругается `File doesn't match the one on the server` (часто из‑за разных копий / CRLF).
 
 В главном меню PZ: **Mods** → включить **AI Thoughts**.
 

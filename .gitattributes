@@ -1,0 +1,13 @@
+# MP checksums are byte-exact: same clone → same files on every PC.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ogg binary
+*.wav binary
+*.bank binary
+*.exe binary
+*.dll binary
