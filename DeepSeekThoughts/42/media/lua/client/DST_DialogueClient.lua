@@ -1,7 +1,7 @@
 --[[
-  Client: detect serious dialogue triggers and send DialogueEvent to host.
-  Dialogue lines always play as Say bubbles on the speaker's client (MP syncs).
-  Quiet small talk: Say without zombie attract. Serious: Say + optional attract.
+  Client: detect dialogue triggers and send DialogueEvent to host.
+  DialogueLine: HaloTextHelper over speaker on EVERY client (B42 MP).
+  Attract zombies only for local speaker on non-quiet lines.
 ]]
 
 DSThoughts = DSThoughts or {}
@@ -219,7 +219,7 @@ function DC.drawSticky()
     getTextManager():DrawStringCentre(UIFont.Medium, x, y, DC._sticky.text, 1.0, 0.86, 0.55, alpha)
 end
 
---- Find IsoPlayer who should speak this line (prefer local player when we are speaker).
+--- Find IsoPlayer who should speak this line (local or remote representation).
 local function resolveSpeakerPlayer(args)
     local me = getPlayer()
     if not me then return nil, false end
@@ -231,7 +231,6 @@ local function resolveSpeakerPlayer(args)
     if isMe then
         return me, true
     end
-    -- Fallback: locate speaker among online players (local Say if object is usable)
     local found = nil
     pcall(function()
         if not getOnlinePlayers then return end
@@ -249,10 +248,29 @@ local function resolveSpeakerPlayer(args)
             end
         end
     end)
-    return found or me, false
+    return found, false
 end
 
---- Apply DialogueLine: always Say bubble on speaker. Zombie attract only if not quiet.
+local function showHaloOverSpeaker(speaker, text)
+    local ok = false
+    pcall(function()
+        if HaloTextHelper and HaloTextHelper.addText then
+            HaloTextHelper.addText(speaker, text, 255, 220, 140)
+            ok = true
+        end
+    end)
+    if ok then return true end
+    pcall(function()
+        if HaloTextHelper and HaloTextHelper.addText then
+            HaloTextHelper.addText(speaker, text)
+            ok = true
+        end
+    end)
+    return ok
+end
+
+--- Apply DialogueLine on EVERY client: halo over the speaker IsoPlayer.
+--- Zombie attract only if we are the local speaker and line is not quiet.
 function DC.onDialogueLine(args)
     args = args or {}
     DC._inDialogue = true
@@ -269,16 +287,24 @@ function DC.onDialogueLine(args)
     end
 
     local speaker, isLocalSpeaker = resolveSpeakerPlayer(args)
-    if not speaker or not isLocalSpeaker then
-        -- Only the speaking player's client runs Say (game syncs the bubble to others).
-        return
+    local haloOk = false
+    if speaker then
+        haloOk = showHaloOverSpeaker(speaker, text)
+        if isLocalSpeaker then
+            pcall(function()
+                if speaker.Say then speaker:Say(text) end
+            end)
+        end
     end
 
-    pcall(function()
-        if speaker.Say then
-            speaker:Say(text)
-        end
-    end)
+    if not haloOk then
+        DC.showLine(args.display or text)
+        C.log("DialogueLine fallback sticky speaker="
+            .. tostring(args.speaker) .. " local=" .. tostring(isLocalSpeaker))
+    else
+        C.log("DialogueLine halo speaker=" .. tostring(args.speaker)
+            .. " local=" .. tostring(isLocalSpeaker))
+    end
 
     local attracts = args.attracts_zombies
     if attracts == nil then
@@ -288,7 +314,7 @@ function DC.onDialogueLine(args)
         attracts = false
     end
 
-    if attracts then
+    if isLocalSpeaker and speaker and attracts then
         local r = C.DialogueSoundRadius or 18
         local vol = (DSThoughts.Dialogue and DSThoughts.Dialogue.SOUND_VOLUME) or 60
         if DSThoughts.B42 and DSThoughts.B42.attractZombies then

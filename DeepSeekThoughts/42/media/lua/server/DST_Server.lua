@@ -369,7 +369,9 @@ local function enrichDialogueSnapshot(item)
         memory_soft = memorySoft,
         turn = (sess and (sess.turn_i or 0) + 1) or 1,
         max_turns = (sess and sess.max_turns) or (C.DialogueMaxTurns or 6),
-        prefer_end = sess and ((sess.turn_i or 0) + 1) >= ((sess.max_turns or 6) - 1),
+        -- Never ask LLM to wrap up before the 4-line floor
+        prefer_end = sess and ((sess.turn_i or 0) + 1) >= 4
+            and ((sess.turn_i or 0) + 1) >= ((sess.max_turns or 6) - 1),
         quiet = isQuiet and true or false,
         casual = isQuiet and true or false,
         banter = banterCard,
@@ -737,7 +739,8 @@ local function onDialogueEvent(player, args)
 
     local maxTurns = C.DialogueMaxTurns or 6
     if isSmall then
-        maxTurns = C.SmallTalkMaxTurns or (DSThoughts.Banter and DSThoughts.Banter.SMALLTALK_MAX_TURNS) or 3
+        maxTurns = C.SmallTalkMaxTurns or (DSThoughts.Banter and DSThoughts.Banter.SMALLTALK_MAX_TURNS) or 4
+        if maxTurns < 4 then maxTurns = 4 end
     end
 
     sessionSeq = sessionSeq + 1

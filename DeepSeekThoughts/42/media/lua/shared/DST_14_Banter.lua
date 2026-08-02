@@ -9,7 +9,7 @@ DSThoughts.Banter = DSThoughts.Banter or {}
 local B = DSThoughts.Banter
 local C = DSThoughts.Config
 
-B.SMALLTALK_MAX_TURNS = 3
+B.SMALLTALK_MAX_TURNS = 4
 B.SMALLTALK_TURN_GAP = 7
 B.BASE_ROLL_CHANCE = 20 -- percent per calm scan when gates pass
 

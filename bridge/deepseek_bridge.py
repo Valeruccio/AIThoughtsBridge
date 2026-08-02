@@ -73,6 +73,7 @@ STATUS = IO_ROOT / "status.txt"
 SETTINGS_TXT = IO_ROOT / "settings.txt"
 
 RECENT_PATH = IO_ROOT / "recent_thoughts.txt"
+RECENT_DIALOGUE_PATH = IO_ROOT / "recent_dialogue.txt"
 RECENT_MAX = 12
 POLL_SEC = 0.75
 # request_id last-seen per IO root path
@@ -691,7 +692,11 @@ def resolve_system_prompt(data: dict) -> str:
     world = (prompts.get("world_main") or "").strip()
     kind = str(data.get("kind") or "thought").lower()
     if kind == "dialogue":
-        base = world if world else FALLBACK_DIALOGUE_SYSTEM
+        # Guard: never use INNER VOICE / thought framing for spoken lines
+        if (not world) or ("INNER VOICE" in world) or ("first-person inner thought" in world.lower()):
+            base = FALLBACK_DIALOGUE_SYSTEM
+        else:
+            base = world
         return (
             base
             + "\n\nCRITICAL OUTPUT RULE: Output ONLY one JSON object, no markdown fences, no preamble.\n"
@@ -704,28 +709,61 @@ def resolve_system_prompt(data: dict) -> str:
     return base + "\n\nCRITICAL OUTPUT RULE: Output ONLY the thought text. No preamble, no meta."
 
 
-def load_recent_thoughts() -> list[str]:
-    if not RECENT_PATH.exists():
+def load_recent_lines(kind: str = "thought") -> list[str]:
+    path = RECENT_DIALOGUE_PATH if str(kind).lower() == "dialogue" else RECENT_PATH
+    if not path.exists():
         return []
     try:
         lines = [
             ln.strip()
-            for ln in RECENT_PATH.read_text(encoding="utf-8", errors="ignore").splitlines()
+            for ln in path.read_text(encoding="utf-8", errors="ignore").splitlines()
         ]
         return [ln for ln in lines if ln][-RECENT_MAX:]
     except OSError:
         return []
 
 
-def save_recent_thought(text: str) -> None:
-    recent = load_recent_thoughts()
+def save_recent_line(text: str, kind: str = "thought") -> None:
+    path = RECENT_DIALOGUE_PATH if str(kind).lower() == "dialogue" else RECENT_PATH
+    recent = load_recent_lines(kind)
     recent.append(text.replace("\n", " ").strip())
     recent = recent[-RECENT_MAX:]
     try:
         ensure_dirs()
-        RECENT_PATH.write_text("\n".join(recent) + "\n", encoding="utf-8")
+        path.write_text("\n".join(recent) + "\n", encoding="utf-8")
     except OSError:
         pass
+
+
+def load_recent_thoughts() -> list[str]:
+    """Back-compat alias — thought bank only."""
+    return load_recent_lines("thought")
+
+
+def save_recent_thought(text: str) -> None:
+    """Back-compat alias — thought bank only."""
+    save_recent_line(text, "thought")
+
+
+def reject_keywords_from_draft(text: str, limit: int = 4) -> list[str]:
+    """Pull concrete tokens from a rejected draft to ban on retry."""
+    stop = {
+        "это", "как", "что", "для", "меня", "тебя", "него", "неё", "есть", "было",
+        "будет", "только", "просто", "очень", "ещё", "еще", "уже", "или", "если",
+        "the", "and", "that", "with", "from", "have", "this", "just", "only",
+        "about", "would", "could", "should",
+    }
+    words: list[str] = []
+    seen: set[str] = set()
+    for raw in re.findall(r"[A-Za-zА-Яа-яЁё]{4,}", text or ""):
+        w = raw.lower()
+        if w in stop or w in seen:
+            continue
+        seen.add(w)
+        words.append(raw)
+        if len(words) >= limit:
+            break
+    return words
 
 
 def load_game_settings() -> dict:
@@ -1263,8 +1301,6 @@ def build_dialogue_user_prompt(data: dict, budget: dict) -> str:
     if dlg.get("trigger_micro"):
         lines.append(f"Beat: {dlg.get('trigger_micro')}")
     lines.append(f"Turn {dlg.get('turn') or 1}/{dlg.get('max_turns') or 6}")
-    if dlg.get("prefer_end"):
-        lines.append("Prefer closing the beat (should_end true) unless something urgent remains.")
 
     hint = str(dlg.get("address_mode_hint") or "all")
     lines.append(f"Address hint: {hint}")
@@ -1323,6 +1359,14 @@ def build_dialogue_user_prompt(data: dict, budget: dict) -> str:
 
     hist = dlg.get("history") or []
     if hist:
+        last = hist[-1] or {}
+        last_who = last.get("speaker") or "someone"
+        last_text = (last.get("text") or "").strip()
+        if last_text:
+            lines.append("")
+            lines.append(
+                f'You are responding to {last_who} who just said: "{last_text}"'
+            )
         lines.append("")
         lines.append("RECENT LINES (do not repeat; answer in turn):")
         for h in hist[-4:]:
@@ -1337,6 +1381,23 @@ def build_dialogue_user_prompt(data: dict, budget: dict) -> str:
             elif am == "void":
                 prefix = f"{who}(void)"
             lines.append(f'  {prefix}: "{h.get("text") or ""}"')
+
+    if dlg.get("prefer_end"):
+        lines.append("")
+        lines.append(
+            "You may close naturally if the beat feels finished "
+            "(should_end true). Do not force a goodbye."
+        )
+    else:
+        # Explicit: continue the conversation; do not wrap up early
+        turn_n = int(dlg.get("turn") or 1)
+        max_n = int(dlg.get("max_turns") or 4)
+        if turn_n < 4 and turn_n < max_n:
+            lines.append("")
+            lines.append(
+                "Continue the conversation naturally. Do NOT say goodbye or wrap up yet "
+                "(should_end false)."
+            )
 
     lines.append("")
     lines.append(
@@ -1550,7 +1611,13 @@ def extract_message_text(message) -> str:
     return content
 
 
-def completion_kwargs_for_llm(llm: dict, budget: dict, temperature: float) -> dict:
+def completion_kwargs_for_llm(
+    llm: dict,
+    budget: dict,
+    temperature: float,
+    *,
+    frequency_penalty: float | None = None,
+) -> dict:
     """Build chat.completions.create kwargs; disable Ollama think-mode for empty-content models."""
     kwargs = {
         "model": llm["model"],
@@ -1564,8 +1631,8 @@ def completion_kwargs_for_llm(llm: dict, budget: dict, temperature: float) -> di
         kwargs["extra_body"] = {"think": False, "reasoning_effort": "none"}
         kwargs["max_tokens"] = max(int(budget["max_tokens"]), 120)
     elif provider in ("deepseek", "openai") or "deepseek" in base:
-        # Anti-loop without bloating the prompt; skip for Ollama compatibility
-        kwargs["frequency_penalty"] = 0.5
+        pen = 0.5 if frequency_penalty is None else float(frequency_penalty)
+        kwargs["frequency_penalty"] = max(0.0, min(2.0, pen))
     return kwargs
 
 
@@ -1629,11 +1696,11 @@ def call_llm_result(data: dict) -> dict:
     )
 
     client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout)
-    recent = load_recent_thoughts()
+    recent = load_recent_lines(kind)
     system_prompt = resolve_system_prompt(data)
     base_user = build_user_prompt(data, budget)
     text = ""
-    temperature = budget["temp"]
+    temperature = float(budget["temp"])
     dlg_fields = {
         "address_mode": "all",
         "address_to": "",
@@ -1647,6 +1714,7 @@ def call_llm_result(data: dict) -> dict:
 
     for attempt in range(3):
         extra = ""
+        banned = reject_keywords_from_draft(text) if (attempt > 0 and text) else []
         if attempt > 0:
             if kind == "dialogue":
                 extra = (
@@ -1704,6 +1772,12 @@ def call_llm_result(data: dict) -> dict:
                 )
                 if text:
                     extra += f"\nRejected draft: {text}"
+            if banned:
+                extra += (
+                    "\nPREVIOUS DRAFT REJECTED (Do not reuse words: "
+                    + ", ".join(banned)
+                    + "). Try a completely different reaction!"
+                )
 
         user_msg = base_user + extra
         print_llm_prompt_dump(
@@ -1714,8 +1788,11 @@ def call_llm_result(data: dict) -> dict:
             model=str(model or ""),
         )
 
+        # Escalate diversity on retries (DeepSeek frequency_penalty + temp)
+        freq_pen = 0.5 + attempt * 0.3  # 0.5 → 0.8 → 1.1
+        temp_try = min(1.2, temperature + attempt * 0.2)
         create_kwargs = completion_kwargs_for_llm(
-            llm, budget, min(1.15, temperature + attempt * 0.08)
+            llm, budget, temp_try, frequency_penalty=freq_pen
         )
         resp = client.chat.completions.create(
             messages=[
@@ -1748,8 +1825,7 @@ def call_llm_result(data: dict) -> dict:
                 arc_phase=arc_phase,
                 digest=digest_list,
             )
-            # Dialogue: block only meta/empty. Cliche list is for inner thoughts
-            # ("как будто" etc. are normal in spoken Russian).
+            # Dialogue: block only meta/empty. Cliche list is for inner thoughts.
             last_reasons = [r for r in last_reasons if r in ("meta", "empty")]
             if not last_reasons:
                 accepted = True
@@ -1788,10 +1864,15 @@ def call_llm_result(data: dict) -> dict:
 
     if not accepted or not text:
         why = ",".join(last_reasons) if last_reasons else "empty"
-        # Dialogue: if we have spoken text, publish last draft instead of killing the turn
+        soft_ok = False
         if kind == "dialogue" and text and "meta" not in (last_reasons or []):
+            soft_ok = True
+        elif kind != "dialogue" and text and "meta" not in (last_reasons or []):
+            # Fail-safe: publish last draft so MP/host never hangs on topic_lock loops
+            soft_ok = True
+        if soft_ok:
             print(
-                f"[bridge] dialogue soft-accept after retries "
+                f"[bridge] {kind} soft-accept after retries "
                 f"(was rejected={why}): {text}"
             )
             accepted = True
@@ -1801,7 +1882,7 @@ def call_llm_result(data: dict) -> dict:
                 "(no publish of bad draft)"
             )
 
-    save_recent_thought(text)
+    save_recent_line(text, kind)
     out = {"thought": text, "kind": kind}
     if kind == "dialogue":
         out.update(dlg_fields)

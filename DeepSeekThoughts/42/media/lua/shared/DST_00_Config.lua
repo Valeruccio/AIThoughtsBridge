@@ -31,7 +31,7 @@ C.DialogueDisplaySeconds = 8
 C.SmallTalkEnabled = true
 C.BanterHeat = "normal" -- soft | normal | spicy
 C.SmallTalkMinutes = 10 -- group cooloff minutes for casual
-C.SmallTalkMaxTurns = 3
+C.SmallTalkMaxTurns = 4
 C.SmallTalkTurnGapSec = 7
 
 -- Display sticky duration

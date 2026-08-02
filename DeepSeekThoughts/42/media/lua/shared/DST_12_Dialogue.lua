@@ -196,8 +196,13 @@ end
 
 function D.shouldEndSession(session, llmShouldEnd)
     if not session then return true end
+    local total = session.turn_i or 0
+    -- Full beat: at least ~2 lines per participant (4 total) before LLM may close
+    if total < 4 then
+        return false
+    end
     if llmShouldEnd then return true end
-    if (session.turn_i or 0) >= (session.max_turns or D.MAX_TURNS) then
+    if total >= (session.max_turns or D.MAX_TURNS) then
         return true
     end
     if session.phase == "dead_end" or session.phase == "cooloff" then
