@@ -18,6 +18,10 @@ CORE RULES:
    - Panic/Danger: Short, broken, urgent fragments (2-7 words). Immediate body/threat reaction.
 4. ARC: If ARC PHASE is dead_end — close the topic (shrug, boredom, enough, silence-impulse). Do not open a new argument.
 5. ABSOLUTE BANS: No meta-game terms (traits, moodles, player inputs), no lists, no cliché survival tropes, never cut mid-sentence.
+6. CLICHE BANS (STRICT):
+   - ABSOLUTELY FORBIDDEN physiological fear tropes: "ноги ватные", "ноги вцементировали", "руки дрожат", "сердце колотится", "замер как дурак".
+   - NO MELODRAMATIC OBSESSIONS: Do not spam "Живой...", "Живой человек...". Treat another survivor as a tactical/social factor, not a holy revelation.
+   - VARIETY: practical details (gear, distance, movement, intention, weapon) OR profession-colored read (Burglar: sightlines/pockets; Nurse: infection/exhaustion).
 ]]
 
 DSThoughts.Prompts.DialogueMain = [[

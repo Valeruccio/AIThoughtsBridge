@@ -44,6 +44,13 @@ def test_natural_kak_budto_allowed():
     )
 
 
+def test_physio_fear_cliches_banned():
+    assert thought_has_banned("Ноги ватные — не идут.")
+    assert thought_has_banned("Сердце колотится как бешеное.")
+    assert thought_has_banned("Живой человек рядом...")
+    assert thought_has_banned("Hands shaking, heart pounding.")
+
+
 def test_meta_reject():
     assert looks_like_meta_thought("Plan for inner voice: draft candidates")
     assert looks_like_meta_thought("OUTPUT LANGUAGE: Russian")

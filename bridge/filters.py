@@ -25,6 +25,14 @@ BANNED_SUBSTR = [
     "адреналин ударил",
     "реальность ударила",
     "нужно сосредоточиться",
+    # Physiological fear tropes / survivor melodrama
+    "ноги ватн",
+    "вцементир",
+    "руки дрож",
+    "сердце колол",
+    "сердце колотит",
+    "замер как",
+    "живой человек",
     # EN
     "heart in my throat",
     "heart skipped",
@@ -41,6 +49,11 @@ BANNED_SUBSTR = [
     "reality set in",
     "i need to focus",
     "in this world",
+    "legs like jelly",
+    "cemented to the floor",
+    "hands shaking",
+    "heart pounding",
+    "another living",
 ]
 
 TOPIC_CLUSTERS = {

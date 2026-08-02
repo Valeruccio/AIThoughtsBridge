@@ -31,6 +31,7 @@ from filters import (
     enforce_word_limit,
     hits_cluster,
     looks_like_meta_thought,
+    thought_has_banned,
     thought_reject_reasons,
 )
 
@@ -98,7 +99,11 @@ FALLBACK_SYSTEM_PROMPT = """You are the INNER VOICE of a survivor in Knox County
 Goal: Generate ONE raw, first-person inner thought in the target language.
 OUTPUT: thought text only — no quotes, meta, or thinking process.
 PACING: Calm = 1 finished sentence (10–20 words); Panic = 2–7 broken fragments.
-Respect gender grammar. No meta-game labels, lists, or mid-sentence cuts."""
+Respect gender grammar. No meta-game labels, lists, or mid-sentence cuts.
+CLICHE BANS (STRICT):
+- ABSOLUTELY FORBIDDEN physiological fear tropes: "ноги ватные", "ноги вцементировали", "руки дрожат", "сердце колотится", "замер как дурак".
+- NO MELODRAMATIC OBSESSIONS: Do not spam "Живой...", "Живой человек...". Treat another survivor as a tactical/social factor, not a holy revelation.
+- VARIETY: practical details (gear, distance, movement, intention, weapon) OR profession-colored read."""
 
 FALLBACK_DIALOGUE_SYSTEM = """You speak ALOUD as one Knox Event survivor near other survivors.
 ONE short spoken line. Output a single JSON object only.
@@ -1636,6 +1641,32 @@ def completion_kwargs_for_llm(
     return kwargs
 
 
+def grounded_fallback_thought(data: dict) -> str:
+    """Safe non-cliche scrap when all drafts fail banned tropes."""
+    lang = str(data.get("language") or "ru").lower()
+    digest = [str(x).lower() for x in (data.get("digest") or data.get("situation_digest") or [])]
+    blob = " ".join(digest)
+    if lang == "en":
+        if "rain" in blob or "дожд" in blob:
+            return "Rain keeps tapping — mind drifts to dry socks."
+        if "hunger" in blob or "голод" in blob or "hungry" in blob:
+            return "Stomach complains again — need real food soon."
+        if "tired" in blob or "уста" in blob:
+            return "Heavy eyelids — one more stretch, then rest."
+        if "cold" in blob or "холод" in blob:
+            return "Air bites the skin — keep moving for warmth."
+        return "Quiet stretch of road — nothing useful yet."
+    if "rain" in blob or "дожд" in blob:
+        return "Дождь барабанит — хоть носки бы сухие."
+    if "hunger" in blob or "голод" in blob or "hungry" in blob:
+        return "Желудок снова орёт — нужна нормальная еда."
+    if "tired" in blob or "уста" in blob:
+        return "Веки тяжёлые — ещё кусок пути, потом отдых."
+    if "cold" in blob or "холод" in blob:
+        return "Воздух кусает кожу — двигаться, согреться."
+    return "Тихий участок — ничего полезного пока."
+
+
 def call_deepseek(data: dict) -> str:
     """Call active LLM. For dialogue kind, returns JSON string; use call_llm_result for structured."""
     result = call_llm_result(data)
@@ -1868,8 +1899,16 @@ def call_llm_result(data: dict) -> dict:
         if kind == "dialogue" and text and "meta" not in (last_reasons or []):
             soft_ok = True
         elif kind != "dialogue" and text and "meta" not in (last_reasons or []):
-            # Fail-safe: publish last draft so MP/host never hangs on topic_lock loops
-            soft_ok = True
+            # Never soft-publish physiological / melodrama cliches
+            if "cliche" in (last_reasons or []) or thought_has_banned(text):
+                fb = grounded_fallback_thought(data)
+                print(
+                    f"[bridge] thought cliche blocked — fallback instead of banned draft: {fb}"
+                )
+                text = fb
+                soft_ok = True
+            else:
+                soft_ok = True
         if soft_ok:
             print(
                 f"[bridge] {kind} soft-accept after retries "
@@ -1881,6 +1920,11 @@ def call_llm_result(data: dict) -> dict:
                 f"thought_rejected:{why} — fail-closed after retries "
                 "(no publish of bad draft)"
             )
+
+    # Final safety: never save/publish banned thought cliche
+    if kind != "dialogue" and thought_has_banned(text):
+        text = grounded_fallback_thought(data)
+        print(f"[bridge] final cliche scrub → {text}")
 
     save_recent_line(text, kind)
     out = {"thought": text, "kind": kind}

@@ -424,6 +424,7 @@ local NO_COOLOFF_BYPASS = {
     in_combat = true,
     gunshot_echo = true,
     landed_hit_melee = true,
+    player_nearby = true,
 }
 
 --- Apply cooldowns, sort, trim. Calm: prefer mind_wander over body-mirror stack.

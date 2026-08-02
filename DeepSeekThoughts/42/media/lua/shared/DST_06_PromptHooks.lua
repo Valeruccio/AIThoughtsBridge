@@ -561,8 +561,8 @@ H.Defs = {
         micro = "First dead down today — ugly relief, hands still buzzing.",
     },
     player_nearby = {
-        priority = 63, cooldown = 150,
-        micro = "Another living person close — hope, suspicion, awkward body.",
+        priority = 58, cooldown = 420,
+        micro = "Another survivor in sight. Assess threat, intentionality, and angle of approach. Pragmatic, grounded observation.",
     },
     falling_asleep = {
         priority = 34, cooldown = 180,

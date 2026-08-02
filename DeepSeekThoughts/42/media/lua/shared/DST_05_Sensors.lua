@@ -1179,22 +1179,39 @@ function Sen.collect(player)
         end
     end)
 
-    local playerNearby = false
+    -- Rising edge + hysteresis: arm at <=8 tiles, clear only when all others >12
+    local playerNearbyEdge = false
     pcall(function()
+        local Sens = DSThoughts.Sensors
         if not getOnlinePlayers then return end
         local players = getOnlinePlayers()
-        if not players then return end
+        if not players then
+            Sens._hadPlayerNearby = false
+            return
+        end
         local px, py = player:getX(), player:getY()
+        local anyClose = false -- <= 8
+        local anyInsideHyst = false -- <= 12
         for i = 0, players:size() - 1 do
             local o = players:get(i)
             if o and o ~= player and not o:isDead() then
                 local dx = (o:getX() or 0) - px
                 local dy = (o:getY() or 0) - py
-                if (dx * dx + dy * dy) <= 64 then -- 8 tiles
-                    playerNearby = true
-                    break
+                local d2 = dx * dx + dy * dy
+                if d2 <= 64 then
+                    anyClose = true
+                    anyInsideHyst = true
+                elseif d2 <= 144 then
+                    anyInsideHyst = true
                 end
             end
+        end
+        local had = Sens._hadPlayerNearby and true or false
+        if anyClose and not had then
+            playerNearbyEdge = true
+            Sens._hadPlayerNearby = true
+        elseif not anyInsideHyst then
+            Sens._hadPlayerNearby = false
         end
     end)
 
@@ -1233,7 +1250,7 @@ function Sen.collect(player)
             drinking = (ev.drinking_until or 0) > now,
             loot_find_rare = (ev.loot_until or 0) > now,
             first_kill_session = (ev.first_kill_until or 0) > now,
-            player_nearby = playerNearby,
+            player_nearby = playerNearbyEdge,
             drunk = (moodles.drunk or 0) >= 2,
         },
     }
